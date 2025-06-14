@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>এক কথায় প্রকাশ</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/syle.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+    </head>
+
+    <body>
+
+        <div class="container mt-5">
+            <h3 class="text-center mb-4">বাংলা এক কথায় প্রকাশ</h3>
+
+            <div class="table-responsive">
+                <button onclick="showNextMeaning()" id="nextBtn" style="margin: 10px; padding: 10px 20px;">Next</button>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>বাক্যাংশ</th>
+                        <th>এক কথায় প্রকাশ</th>
+                        <th>Your Answer</th>
+                    </tr>
+                    </thead>
+                    <tbody id="phrase-table">
+                        <tr><td>আকাশে উড়ে যে</td><td class="meaning hidden-meaning">খেচর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>আকাশ ও পৃথিবীর অন্তরাল</td><td class="meaning hidden-meaning">ক্রন্দসী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা খুব শীতল বা উষ্ণ নয়</td><td class="meaning hidden-meaning">নাতিশীতোষ্ণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একই গুরুর শিষ্য</td><td class="meaning hidden-meaning">সতীর্থ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা ক্রমশ বিস্তীর্ণ হচ্ছে</td><td class="meaning hidden-meaning">ক্রমবিকাশমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার দাড়ি গোঁফ ওঠেনি</td><td class="meaning hidden-meaning">অজাতশ্মশ্রু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মরমর হয়েছে যে</td><td class="meaning hidden-meaning">মর্মর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি প্রথম পথ দেখান</td><td class="meaning hidden-meaning">পথিকৃৎ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নুপুরের ধ্বনি</td><td class="meaning hidden-meaning">নূপুরনাদ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বাঁদের চামড়া</td><td class="meaning hidden-meaning">চর্ম</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার সর্বস্ব চুরি হয়ে গেছে</td><td class="meaning hidden-meaning">হৃতসর্বস্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ভোজন করার ইচ্ছা</td><td class="meaning hidden-meaning">বুভুক্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পান করার অযোগ্য</td><td class="meaning hidden-meaning">অপেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>রাত্রিকালীন যুদ্ধ</td><td class="meaning hidden-meaning">নিশীথযুদ্ধ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দিনের মধ্যভাগ</td><td class="meaning hidden-meaning">মধ্যাহ্ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কোকিলের ডাক</td><td class="meaning hidden-meaning">কুহু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দান করার ইচ্ছা</td><td class="meaning hidden-meaning">দীক্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শুকনো পাতার শব্দ</td><td class="meaning hidden-meaning">মর্মর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ময়ূরের ডাক</td><td class="meaning hidden-meaning">কেকা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা অভিক্রম করা যায় না</td><td class="meaning hidden-meaning">অনভিক্রম্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পূর্বে শোনা যায়নি</td><td class="meaning hidden-meaning">অশ্রুতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হনন করিবার ইচ্ছা</td><td class="meaning hidden-meaning">জিঘাংসা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দমন করা যায় না যা</td><td class="meaning hidden-meaning">অদম্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দমন করা কষ্টকর যাকে</td><td class="meaning hidden-meaning">দুর্দমনীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার অন্য কোন উপায় নেই</td><td class="meaning hidden-meaning">অনন্যোপায়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অন্তিমকাল উপস্থিত যার</td><td class="meaning hidden-meaning">মুমূর্ষু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দান করার যোগ্য</td><td class="meaning hidden-meaning">দেয়/দাতব্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অল্প কথা বলে যে</td><td class="meaning hidden-meaning">মিতভাষী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>আপনাকে যে ভুলে থাকে</td><td class="meaning hidden-meaning">আত্মভোলা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>আকাশে চড়ে যে</td><td class="meaning hidden-meaning">আকাশচারী/খেচর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বলা হয়েছে যা</td><td class="meaning hidden-meaning">উক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পূর্বে যা ঘটেনি</td><td class="meaning hidden-meaning">অভূতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একবার ফল দিয়ে যে গাছ মরে যায়</td><td class="meaning hidden-meaning">ওষধি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দুই নদীর মধ্যবতী স্থান</td><td class="meaning hidden-meaning">দোয়াব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দুইবার জন্মে যে</td><td class="meaning hidden-meaning">দ্বিজ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দুবার ফসল হয় যে জমিতে</td><td class="meaning hidden-meaning">দোফসলি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>স্থায়ী ঠিকানা নেই যার</td><td class="meaning hidden-meaning">উদ্বাস্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                            <th>Your Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr><td>যাকে অকালে জাগরণ করা হয়</td><td class="meaning hidden-meaning">অকালবোধন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>গুণের মূল্য যিনি দেন</td><td class="meaning hidden-meaning">গুণগ্রাহী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ক্রমে যাহা আসিতেছে</td><td class="meaning hidden-meaning">ক্রমানুসারে</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বেঁচে থাকার ইচ্ছা</td><td class="meaning hidden-meaning">জিজীবিষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ক্ষমা পাওয়ার যোগ্য</td><td class="meaning hidden-meaning">ক্ষমার</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ভোজন করার ইচ্ছা</td><td class="meaning hidden-meaning">বুভুক্ষু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ক্ষমা করার ইচ্ছা</td><td class="meaning hidden-meaning">তিতিক্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মেঘের ধ্বনি</td><td class="meaning hidden-meaning">জীমূতমন্ত্র</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ক্ষতিপুরণের জন্য প্রদত্ত অর্থাদি</td><td class="meaning hidden-meaning">খেসারত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে স্ত্রী বশীভূত</td><td class="meaning hidden-meaning">স্ত্রেণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ক্ষুধা দ্বারা পীড়িত</td><td class="meaning hidden-meaning">ক্ষুধার্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে মেঘে প্রচুর বৃষ্টি হয়</td><td class="meaning hidden-meaning">সংবর্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>থেমে চলার যে ভঙ্গি</td><td class="meaning hidden-meaning">ঠমক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে বিষয়ে কোনো বিতর্ক নেই</td><td class="meaning hidden-meaning">অবিসংবাদী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দেশের প্রতি প্রেম আছে যার</td><td class="meaning hidden-meaning">দেশপ্রেমিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারী অন্যের নিন্দা করে না/যে নারীর হিংসা নেই</td><td class="meaning hidden-meaning">অনসূয়া</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পৌষ মাসে উৎপন্ন ফসল</td><td class="meaning hidden-meaning">পৌষালি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বেলাকে অতিক্রান্ত</td><td class="meaning hidden-meaning">উদ্বেল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারী কখনো সূর্য দেখেনি</td><td class="meaning hidden-meaning">অসূর্যস্পশ্যা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বেঁচে আছে যা</td><td class="meaning hidden-meaning">জীবিত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারীর স্বামী ও পুত্র নেই/যে নারীর স্বামীও নেই সন্তানও নেই</td><td class="meaning hidden-meaning">অবীরা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জীবিত থেকেও যে মৃত</td><td class="meaning hidden-meaning">জীবন্মৃত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে পুরুষের স্ত্রী বিদেশে থাকে</td><td class="meaning hidden-meaning">প্রোষিতপত্মীক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে ব্যক্তি অন্যের রচনা ভাব বা ভাষা নিজের নামে চালায়</td><td class="meaning hidden-meaning">কুষ্ঠিলক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে মেয়ের বিয়ে হয়নি/যে নারীর বিয়ে হয়নি</td><td class="meaning hidden-meaning">অনূঢ়া</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে রোগ নির্ণয় করতে হাতড়ে মরে</td><td class="meaning hidden-meaning">হাতুড়ে</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে যন্ত্রের সাহায্যে ওজন পরিমাপ করা হয়</td><td class="meaning hidden-meaning">তুলাদণ্ড</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে কোন বিষয়ে স্পৃহা হারিয়েছে যে</td><td class="meaning hidden-meaning">বীতস্পৃহ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে শুনেই মনে রাখতে পারে</td><td class="meaning hidden-meaning">শ্রুতিধর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারী বীর</td><td class="meaning hidden-meaning">বীরাঙ্গনা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সব হারিয়েছে / যার সর্বস্ব হারিয়ে গেছে</td><td class="meaning hidden-meaning">সর্বহারা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারী সাগরে বিচরণ করে</td><td class="meaning hidden-meaning">সাগরিকা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে জয়লাভে দৃঢ় প্রতিজ্ঞ</td><td class="meaning hidden-meaning">সংশপ্তক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারী নিজে বর বরণ করে নেয়</td><td class="meaning hidden-meaning">স্বয়ংবরা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারী প্রিয় বাক্য বলে</td><td class="meaning hidden-meaning">প্রিয়ভাষী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারীর হাসি সুন্দর</td><td class="meaning hidden-meaning">সুস্মিতা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারীর স্বামী ও পুত্র মৃত</td><td class="meaning hidden-meaning">অবীরা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পুনঃপুন রোদন করছে যে</td><td class="meaning hidden-meaning">রোদ্যমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কেবল নিজেকে নিয়ে ব্যস্ত থাকেন যিনি</td><td class="meaning hidden-meaning">আত্মনিষ্ঠ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে নারীর সম্প্রতি বিয়ে হয়েছে</td><td class="meaning hidden-meaning">নবোঢ়া</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শোভন হৃদয় যার</td><td class="meaning hidden-meaning">সুহৃদ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ঘোড়া রাখার স্থান</td><td class="meaning hidden-meaning">ঘোরাশাল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ঘোড়ার ডাক/অশ্বের ডাক</td><td class="meaning hidden-meaning">হেষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে ব্যক্তি পূর্বজন্মের কথা স্মরণ করতে পারে</td><td class="meaning hidden-meaning">জাতিস্মর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>চোখের কোণ</td><td class="meaning hidden-meaning">অপাঙ্খ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে বন হিংস্র জন্তুতে পরিপূর্ণ</td><td class="meaning hidden-meaning">শ্বাপদসংকুল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জেনেও যে পাপ করে</td><td class="meaning hidden-meaning">জ্ঞানপাপী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>চৈত্র মাসের ফসল</td><td class="meaning hidden-meaning">চৈতালি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অর্থ নেই যার</td><td class="meaning hidden-meaning">নিরর্থক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অর্থহীন উক্তি</td><td class="meaning hidden-meaning">প্রলাপ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অন্যের লেখা চুরি করে এমন</td><td class="meaning hidden-meaning">কুষ্ঠিলক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অনেকের মধ্যে একজন</td><td class="meaning hidden-meaning">অন্যতম</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে গাছ অন্য গাছকে আশ্রয় করে বাঁচে</td><td class="meaning hidden-meaning">পরগাছা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ধনের দেবতা</td><td class="meaning hidden-meaning">কুবের</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে গাছের বিস্তর ছায়া হয়</td><td class="meaning hidden-meaning">ছায়াতরু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অনেক দেখেছে যে</td><td class="meaning hidden-meaning">ভূয়োদর্শী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে সুপথ থেকে কুপথে যায়</td><td class="meaning hidden-meaning">উন্মার্গগামী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অনেক দেখেছে যে</td><td class="meaning hidden-meaning">বহুদর্শী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যেখানে বেশি কথা বলা হয়েছে</td><td class="meaning hidden-meaning">অতিরঞ্জিত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অশ্বের ডাক</td><td class="meaning hidden-meaning">হেষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কোথাও উঁচু কোথাও নীচু</td><td class="meaning hidden-meaning">বন্ধুর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অগ্রে গমন করে যে</td><td class="meaning hidden-meaning">অগ্রগামী/অগ্রজ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কোনোভাবেই যা নির্বারণ করা যায় না</td><td class="meaning hidden-meaning">অনিবার্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শোক দ্বারা আতুর</td><td class="meaning hidden-meaning">শোকাতুর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কোকিলের ডাক</td><td class="meaning hidden-meaning">কুহু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অধরপ্রান্তের হাসি</td><td class="meaning hidden-meaning">বক্রোষ্ঠিকামর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>খেয়া পার করে যে</td><td class="meaning hidden-meaning">পাটনী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অন্য দেশ</td><td class="meaning hidden-meaning">দেশান্তর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সেবা করিবার ইচ্ছা</td><td class="meaning hidden-meaning">শুশ্রুষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অন্য ভাষায় অনুবাদ/উদিত হয়নি যাহ</td><td class="meaning hidden-meaning">অনুদিত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অন্য যুগ</td><td class="meaning hidden-meaning">যুগান্তর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অন্য গ্রাম</td><td class="meaning hidden-meaning">গ্রামান্তর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    </tbody>
+
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+
+                    <thead class="table-dark">
+                    <tr>
+                    <th>বাক্যাংশ</th>
+                    <th>এক কথায় প্রকাশ</th>
+                    <th>Your Answer</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr><td>গোপন করার ইচ্ছা</td><td class="meaning hidden-meaning">জুগুলা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অন্য দিকে মন দেয় না</td><td class="meaning hidden-meaning">অনন্যমনা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ঘোড়া রাখার জায়গা</td><td class="meaning hidden-meaning">ঘোড়াশাল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অন্য দিকে মন নেই যার</td><td class="meaning hidden-meaning">অন্যমনা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>চোখের দ্বারা গৃহীত</td><td class="meaning hidden-meaning">গোচর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অন্যলোক</td><td class="meaning hidden-meaning">লোকান্তর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>চোখের কোণ</td><td class="meaning hidden-meaning">অপাঙ্খ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অনকের মধ্যে একজন</td><td class="meaning hidden-meaning">অন্যতম</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>টোল পড়েনি এমন</td><td class="meaning hidden-meaning">নিটোল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অনায়াসে যা লাভ করা যায়</td><td class="meaning hidden-meaning">অনায়াসলভ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>যা বলা হয়নি</td><td class="meaning hidden-meaning">অনুক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অনুকরণে ইচ্ছুক</td><td class="meaning hidden-meaning">অনুচিকীর্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>দেহে মনে ও কথায়</td><td class="meaning hidden-meaning">কায়মনোবাক্যে</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অনুকরণ করা যায় এমন</td><td class="meaning hidden-meaning">অনুকরণীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>দেখবার ইচ্ছা</td><td class="meaning hidden-meaning">দিদৃক্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অনুসন্ধান করতে ইচ্ছুক</td><td class="meaning hidden-meaning">অনুসন্ধিৎসু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অনুসন্ধান করার ইচ্ছা</td><td class="meaning hidden-meaning">অনুসন্ধিৎসা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>নদীর বালুকাময় তট</td><td class="meaning hidden-meaning">সৈকত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অপকার করতে ইচ্ছুক</td><td class="meaning hidden-meaning">অপচিকীর্যু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>নূপুরের ধ্বনি</td><td class="meaning hidden-meaning">নিকুণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অপকার করিবার ইচ্ছা</td><td class="meaning hidden-meaning">অপচিকীর্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>যে সকল অত্যাচার সয়ে যায়</td><td class="meaning hidden-meaning">সর্বংসহা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অবসরজ্ঞায় নাক উঁচু করে যে</td><td class="meaning hidden-meaning">উন্নাসিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>লাভ করার ইচ্ছা</td><td class="meaning hidden-meaning">লিজা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ভ্রমরের ধ্বনি</td><td class="meaning hidden-meaning">গুঞ্জন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ইন্দ্র কে জয় করিয়াছে যে</td><td class="meaning hidden-meaning">ইন্দ্রজিৎ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অল্প বয়স যাহার</td><td class="meaning hidden-meaning">তরুণ বয়স্ক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ইষৎ আমিষ গন্ধ বিশিষ্ট</td><td class="meaning hidden-meaning">আঁষটে</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অল্প কথা বলে যে</td><td class="meaning hidden-meaning">মিতভাষী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ইষৎ পীত বর্ণ</td><td class="meaning hidden-meaning">পীতাভ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অরণ্যের অগ্নিকান্ড</td><td class="meaning hidden-meaning">দাবানল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>নষ্ট হওয়া স্বভাব যার</td><td class="meaning hidden-meaning">নষ্ট</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>তল্পকাল বাস করে যে</td><td class="meaning hidden-meaning">অগন্তুক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ইতিহাস রচনা করেন যিনি</td><td class="meaning hidden-meaning">ঐতিহাসিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অলংকারের ব্যংকার</td><td class="meaning hidden-meaning">শিল্পন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ইতিহাস বিষয়ে অভিজ্ঞ যিনি</td><td class="meaning hidden-meaning">ইতিহাসবেত্তা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অকালে পাকিয়া গিয়াছে যাহা/অকালে পেকেছে যা</td><td class="meaning hidden-meaning">অকালপক্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>নুপুরের ধ্বনি</td><td class="meaning hidden-meaning">নিকুণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অসম সাহস যাহার</td><td class="meaning hidden-meaning">অসমসাহসী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>নতুন সূর্য</td><td class="meaning hidden-meaning">নবারুণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অগ্র পশ্চাৎ বিবেচনা করে কাজ করে যে</td><td class="meaning hidden-meaning">বিমৃষ্যকারী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>পূর্বজন্ম স্মরণ করে যে</td><td class="meaning hidden-meaning">জাতিস্মর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অগ্রসর হয়ে অভ্যর্থনা</td><td class="meaning hidden-meaning">প্রত্যুদগমন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>পক্ষের ন্যায় অক্ষি বা চোখ</td><td class="meaning hidden-meaning">পুডরীকাক্ষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অহংকার নেই যার</td><td class="meaning hidden-meaning">নিরহংকার</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>পরের অন্নে বেঁচে থাকে</td><td class="meaning hidden-meaning">পরজীবী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>অন্তরের ভাব জানেন যিনি</td><td class="meaning hidden-meaning">অন্তর্যামী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>পরের অয়ে জীবন ধারণ করে যে</td><td class="meaning hidden-meaning">পরান্নজীবী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আদব কায়দা জানে না যে</td><td class="meaning hidden-meaning">বেয়াদব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>পরের উন্নতি দেখে কাতর যে</td><td class="meaning hidden-meaning">পরশ্রীকাতর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আবেগজনিত কণ্ঠস্বর</td><td class="meaning hidden-meaning">গদগদ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>পটে আঁকে যে</td><td class="meaning hidden-meaning">পটুয়া</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আগে যা চিন্তা করা হয়নি</td><td class="meaning hidden-meaning">অচিন্তিতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>পরকে প্রতিপালন করে যে</td><td class="meaning hidden-meaning">পরভৃত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আনন্দ নেই যার</td><td class="meaning hidden-meaning">নিরানন্দ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ঈশ্বরে বিশ্বাস আছে যার</td><td class="meaning hidden-meaning">আস্তিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আপনাকে যে পন্ডিত মনে করে</td><td class="meaning hidden-meaning">পন্ডিতম্মন্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ঈশ্বরের ভাব</td><td class="meaning hidden-meaning">ঈশ্বর্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আপনাকে কেন্দ্র করে যার চিন্তা</td><td class="meaning hidden-meaning">আত্মকেন্দ্রিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ঈষৎ আমিষ গন্ধ যার</td><td class="meaning hidden-meaning">আঁষটে</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আপনাকে পন্ডিত মনে করে যে</td><td class="meaning hidden-meaning">পন্ডিতম্মন্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ঈষৎ পাণ্ডুবর্ণ</td><td class="meaning hidden-meaning">ধূসর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>যে ভূমিতে ফসল জন্মায় না</td><td class="meaning hidden-meaning">উষর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>পূর্বে শোনা যায়নি</td><td class="meaning hidden-meaning">অশ্রুতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আপনাকে ভুলে থাকে যে</td><td class="meaning hidden-meaning">আত্মভোলা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ঈষৎ উষ্ণ যাহা</td><td class="meaning hidden-meaning">ঈষদুষ্ণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ধারা ধরে যা চলে</td><td class="meaning hidden-meaning">ধারাবাহিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>ঈষৎ রক্তবর্ণ</td><td class="meaning hidden-meaning">আরক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আল্লাহর উপর যার বিশ্বাস নেই</td><td class="meaning hidden-meaning">নাস্তিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>প্রথমন্ত্রী বর্তমান থাকা অবস্থায় পুনর্বার বিবাহিত</td><td class="meaning hidden-meaning">অধিবেত্তা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আকাশে উড়ে বেড়ায়</td><td class="meaning hidden-meaning">খেচর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>প্রবেশ করার ইচ্ছা</td><td class="meaning hidden-meaning">বিবিক্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আগমনের কোনো তিথি নেই যার</td><td class="meaning hidden-meaning">অতিথি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>প্রশংসার যোগ্য</td><td class="meaning hidden-meaning">প্রশংসনীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আহারে সংযম যার</td><td class="meaning hidden-meaning">মিতাহারী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>প্রকাশিত হবে এমন</td><td class="meaning hidden-meaning">প্রকাশ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আচারে নিষ্ঠা আছে যার</td><td class="meaning hidden-meaning">আচারনিষ্ঠ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>প্রাক্কালে ছিল যা</td><td class="meaning hidden-meaning">প্রাক্তন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>আয় বুঝে ব্যয় করা</td><td class="meaning hidden-meaning">মিতব্যয়ী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    <tr><td>প্রায় মৃত</td><td class="meaning hidden-meaning">মুমূর্ষু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    </tbody>
+
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                            <th>Your Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>আয়ুর পক্ষে হিতকর</td><td class="meaning hidden-meaning">আয়ুষ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পট আঁকে যে</td><td class="meaning hidden-meaning">পটুয়া</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>আদি থেকে অন্ত পর্যন্ত</td><td class="meaning hidden-meaning">আদ্যন্ত/আদ্যোপান্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পাঁচ রকম বন্ধু বা বিষয়ের মিশেল</td><td class="meaning hidden-meaning">পাঁচফোড়ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>আমিষের অভাব</td><td class="meaning hidden-meaning">নিরামিষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পা থেকে মাথা পর্যন্ত</td><td class="meaning hidden-meaning">পাদমস্তক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>আত্মগোপনের উদ্দেশ্যে পরিধেয় ছদ্মবেশ</td><td class="meaning hidden-meaning">আধ্যাত্মিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পাদিয়ে যে চলে না</td><td class="meaning hidden-meaning">পন্নগ (সাপ)</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>আত্মার সম্বন্ধীয়</td><td class="meaning hidden-meaning">আত্মীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পান করার যোগ্য</td><td class="meaning hidden-meaning">পেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অক্ষির অগোচরে</td><td class="meaning hidden-meaning">পরোক্ষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পাঠ করার অযোগ্য</td><td class="meaning hidden-meaning">অপাঠ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অক্ষির সম্মুখে</td><td class="meaning hidden-meaning">চাক্ষুষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পানি পান করার ইচ্ছা</td><td class="meaning hidden-meaning">পিপাসা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অক্ষির সমীপে</td><td class="meaning hidden-meaning">সমক্ষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পাখির ডাক</td><td class="meaning hidden-meaning">কূজন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অক্ষি সমক্ষে বর্তমান</td><td class="meaning hidden-meaning">প্রত্যক্ষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পরিণাম চিন্তা করে যে কাজ করে</td><td class="meaning hidden-meaning">পরিণামদর্শী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অতি উচ্চ রোল</td><td class="meaning hidden-meaning">উতরোল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পতি পুত্রহীনা নারী</td><td class="meaning hidden-meaning">অবীরা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অতি কর্মনিপুণ ব্যক্তি</td><td class="meaning hidden-meaning">কৃতকর্মা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পল্লীর সাথে বর্তমান</td><td class="meaning hidden-meaning">সপল্লীক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বুদ্ধিশক্তির অধিকারী</td><td class="meaning hidden-meaning">ধীমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উদরই সব যার</td><td class="meaning hidden-meaning">উদরসর্বস্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অণু বিষয়ক</td><td class="meaning hidden-meaning">আণবিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উপকার করার ইচ্ছা</td><td class="meaning hidden-meaning">উপচিকীর্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অতর্কিত অবস্থায় আক্রমণকারী</td><td class="meaning hidden-meaning">আততায়ী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উপকারীর অপকার করে যে</td><td class="meaning hidden-meaning">কৃতঘ্ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অতীত, বর্তমান ও ভবিষ্যৎ যিনি জানতে পারেন</td><td class="meaning hidden-meaning">ত্রিকালদর্শী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উপকারীর উপকার স্বীকার করে না যে</td><td class="meaning hidden-meaning">অকৃতজ্ঞ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নদী মেঘলা যে দেশের</td><td class="meaning hidden-meaning">নদীমেখলা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একই কালে বর্তমান</td><td class="meaning hidden-meaning">সমকালীন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উপকারীর উপকার যে স্বীকার করে</td><td class="meaning hidden-meaning">কৃতজ্ঞ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা নিবারণ করা কষ্টকর</td><td class="meaning hidden-meaning">দুর্নিবার</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উপস্থিত আছে যা</td><td class="meaning hidden-meaning">বর্তমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মানের দিক থেকে উত্তীর্ণ</td><td class="meaning hidden-meaning">মানোত্তীর্ণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উপস্থিত বুদ্ধি আছে যার</td><td class="meaning hidden-meaning">প্রত্যুৎপন্নমতি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মুক্তি পেতে ইচ্ছুক</td><td class="meaning hidden-meaning">মুমুক্ষু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একই সময়ে</td><td class="meaning hidden-meaning">যুগপৎ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একশত পঞ্চাশ বছর</td><td class="meaning hidden-meaning">সার্ধশতবর্ষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উর্বর নয় যা</td><td class="meaning hidden-meaning">অনুর্বর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>এখনও আসে নাই যে</td><td class="meaning hidden-meaning">অনাগত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উর্বর নয় যা</td><td class="meaning hidden-meaning">উষর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মহান আশয় যার</td><td class="meaning hidden-meaning">মহাশয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উত্তর দিক সম্পর্কিত</td><td class="meaning hidden-meaning">উদীচ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মাথা পেতে লওয়ার যোগ্য</td><td class="meaning hidden-meaning">শিরোধার্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ফল পাকিলে যে গাছ মরিয়া যায়</td><td class="meaning hidden-meaning">ওষধি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মুক্তির জন্য যুদ্ধ করে যে</td><td class="meaning hidden-meaning">মুক্তিযোদ্ধা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উড়ন্ত পাখির ঝাঁক</td><td class="meaning hidden-meaning">বলাকা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা দীপ্তি পাচ্ছে</td><td class="meaning hidden-meaning">দেদীপ্যমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উজানের কই</td><td class="meaning hidden-meaning">সহজলভ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা চেটে খেতে হয়/যা চেটে খাবার যোগ্য</td><td class="meaning hidden-meaning">লেহ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ফুল হতে তৈরি</td><td class="meaning hidden-meaning">ফুলেল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা অতি দীর্ঘ নয়</td><td class="meaning hidden-meaning">অতিদীর্ঘ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ব্যঞ্জনধ্বনির সংক্ষিপ্ত রূপ</td><td class="meaning hidden-meaning">ফলা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা অতিক্রম করা যায় না</td><td class="meaning hidden-meaning">অনতিক্রম্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ব্যবসার দ্রব্যাদি</td><td class="meaning hidden-meaning">বেসাতি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পূর্বে দেখা যায়নি</td><td class="meaning hidden-meaning">অদৃষ্টপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ব্যয় করতে কুষ্ঠাবোধ করেন যিনি</td><td class="meaning hidden-meaning">কৃপণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পূর্বে দেখা যায়নি এমন</td><td class="meaning hidden-meaning">অদৃষ্টপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ব্যাঙের ছানা</td><td class="meaning hidden-meaning">ব্যাঙাচি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পূর্বে শোনা যায়নি</td><td class="meaning hidden-meaning">অশ্রুতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ব্যাকরণে পন্ডিত যিনি</td><td class="meaning hidden-meaning">বৈয়াকরণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পূর্বে চিন্তা করা যায়নি</td><td class="meaning hidden-meaning">অচিন্তিতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ব্যক্তি সম্পর্কিত নয় এমন</td><td class="meaning hidden-meaning">বস্তুগত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পূর্বে ছিল এখন নেই</td><td class="meaning hidden-meaning">ভূতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বনক্রুভাবে গমন করে যে</td><td class="meaning hidden-meaning">ভুজঙ্গ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা প্রমাণ করা যায় না</td><td class="meaning hidden-meaning">অপ্রমেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বনে বাস করে যে</td><td class="meaning hidden-meaning">বনবাসী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা প্রকাশ করা হয়নি</td><td class="meaning hidden-meaning">অব্যক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বর্ষের শেষে আয়ব্যয়ের প্রতিবেদন</td><td class="meaning hidden-meaning">সালতামামি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা প্রতিরোধ করা যায় না</td><td class="meaning hidden-meaning">অপ্রতিরোধ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>উর্ধ্ববাহু যার</td><td class="meaning hidden-meaning">উদ্বাহ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পানের অযোগ্য</td><td class="meaning hidden-meaning">অপেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বড় ভাই থাকতে ছোট ভাইয়ের বিয়ে</td><td class="meaning hidden-meaning">পরিবেদন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পাওয়া কষ্টকর</td><td class="meaning hidden-meaning">কষ্টসাধ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বয়সের তুল্য</td><td class="meaning hidden-meaning">বয়স্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা উচ্চারণ করতে কষ্ট হয়</td><td class="meaning hidden-meaning">অনুচ্চার্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বহু গৃহ থেকে ভিক্ষা সংগ্রহ করে যে</td><td class="meaning hidden-meaning">মাধুকরী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা উদিত হয়েছে/উদিত হয়েছে যা</td><td class="meaning hidden-meaning">উদীয়মান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                            <th>Your Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>বহু ঘর হতে ভিক্ষা সংগ্রাহক</td><td class="meaning hidden-meaning">মাধুকর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বপন করা হইয়াছে</td><td class="meaning hidden-meaning">উত্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বহুর মধ্যে প্রধান</td><td class="meaning hidden-meaning">শ্রেষ্ঠ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বলা হবে</td><td class="meaning hidden-meaning">বক্তব্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বাঘের চামড়া</td><td class="meaning hidden-meaning">কৃপ্তি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বলা হয়েছে</td><td class="meaning hidden-meaning">উক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বাক্য হারা হয়েছে যিনি</td><td class="meaning hidden-meaning">মহতবাক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বলা হয় নি</td><td class="meaning hidden-meaning">অনুক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বাক্যে প্রকাশ করা যায় না</td><td class="meaning hidden-meaning">অনিবচনীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বলার যোগ্য নয়</td><td class="meaning hidden-meaning">অকথ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বাক্য ও মনের অগোচর</td><td class="meaning hidden-meaning">অবাঙমানসগোচর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বাস্তু থেকে উৎখাত হয়েছে/বাস্তুহারা হয়েছে যে</td><td class="meaning hidden-meaning">উদ্বাস্তু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বান্ধবের সাথে বর্তমান</td><td class="meaning hidden-meaning">সবান্ধব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যাবার বার দুলছে</td><td class="meaning hidden-meaning">দোদুল্যমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বাহুতে ভর দিয়ে চলে যে</td><td class="meaning hidden-meaning">ভুজঙ্গ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বালকের মধ্যেই সুলভ</td><td class="meaning hidden-meaning">বাল্যসুলভ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বাতাসে চরে যে</td><td class="meaning hidden-meaning">কপোত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা ভাগ করা হয়েছে</td><td class="meaning hidden-meaning">বিভক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বীরের উর্ণা ধ্বনি</td><td class="meaning hidden-meaning">হুঙ্কার</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা মর্মকে স্পর্শ করে</td><td class="meaning hidden-meaning">মর্মস্পর্শী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নাভিতে যার</td><td class="meaning hidden-meaning">উর্ণনাভ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা লঙ্ঘন করা দুরূহ</td><td class="meaning hidden-meaning">দুর্লঙ্ঘনীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ভূল্কেন্দ্রের দিকে বস্তুর টান</td><td class="meaning hidden-meaning">অভিকর্ষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কষ্টে লাভ করা যায়</td><td class="meaning hidden-meaning">দুর্লভ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বল ভাতের অভাব</td><td class="meaning hidden-meaning">অভাবাত্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা লাফিয়ে চলে</td><td class="meaning hidden-meaning">প্লবগ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ভবিষ্যৎ চিন্তা করে কাজ করে যে</td><td class="meaning hidden-meaning">দূরদর্শী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা কথায় বর্ণনা করা যায় না</td><td class="meaning hidden-meaning">অবর্ণনীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>খষির দ্বারা উক্ত আর্য খণ দেয় যে</td><td class="meaning hidden-meaning">উত্তমর্ণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা ক্ষেত্রে জয় করা যায়</td><td class="meaning hidden-meaning">দুর্জয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মৃত্তিকা দ্বারা নির্মিত</td><td class="meaning hidden-meaning">মৃন্ময়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জয় সূচক উৎসব</td><td class="meaning hidden-meaning">জয়ন্তী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একের পরিবর্তে আরেক</td><td class="meaning hidden-meaning">বিকল্প</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা কখনো নষ্ট হয় না</td><td class="meaning hidden-meaning">অবিনশ্বর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মধুপান করে যে</td><td class="meaning hidden-meaning">মধুপ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা কাঁপছে</td><td class="meaning hidden-meaning">কম্পমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>এই মাত্র জন্ম যার</td><td class="meaning hidden-meaning">সদ্যোজাত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা স্পর্শ করা যায় না</td><td class="meaning hidden-meaning">অস্পর্শাতীত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মন হরণ করে যা</td><td class="meaning hidden-meaning">মনোহর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা ক্রমশ দূর হয়ে যাচ্ছে</td><td class="meaning hidden-meaning">অপসৃয়মাণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মরমর হয়েছে যে</td><td class="meaning hidden-meaning">সম্মুমূর্ষু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>রাত্রির শেষভাগ</td><td class="meaning hidden-meaning">পররাত্র</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>এক জন্ম থেকে অন্য জন্ম</td><td class="meaning hidden-meaning">জন্মজন্মান্তর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>রাত্রিকালীন যুদ্ধ</td><td class="meaning hidden-meaning">সৌপ্তিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>এক বিষয়ে যার চিত্ত নিবিষ্ট</td><td class="meaning hidden-meaning">একাগ্রচিত্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ত্রাণ লাভ করিবার ইচ্ছা</td><td class="meaning hidden-meaning">তিতীর্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একই অর্থের শব্দ</td><td class="meaning hidden-meaning">প্রতিশব্দ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>রীতিতে অভিক্রম না করে</td><td class="meaning hidden-meaning">যথারীতি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একই মায়ের সন্তান</td><td class="meaning hidden-meaning">সহোদর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কূলের সমীপে</td><td class="meaning hidden-meaning">উপকূল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা ক্রমশ বৃদ্ধি পাচ্ছে</td><td class="meaning hidden-meaning">ক্রমবর্ধমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কৃষি থেকে উৎপন্ন</td><td class="meaning hidden-meaning">কৃষিজ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা ক্রমশ বর্ধিত হচ্ছে</td><td class="meaning hidden-meaning">বর্ধিষ্ণু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কণ্ঠের সমীপে</td><td class="meaning hidden-meaning">উপকণ্ঠ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা ক্রমশ বিস্তীর্ণ হচ্ছে</td><td class="meaning hidden-meaning">ক্রমবিস্তার্যমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কন্যার পুত্র</td><td class="meaning hidden-meaning">দৌহিত্র</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা দেখা যায় না</td><td class="meaning hidden-meaning">অদৃশ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কম কথা বলে যে</td><td class="meaning hidden-meaning">মিতভাষী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পৌতা হয়েছে</td><td class="meaning hidden-meaning">প্রোথিত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কর্ম সম্পাদনে পরিশ্রমী</td><td class="meaning hidden-meaning">কর্মঠ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা খাওয়ার যোগ্য</td><td class="meaning hidden-meaning">খাদ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কর দিতে হয় না যে জমির</td><td class="meaning hidden-meaning">নিষ্কর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা সহজে অতিক্রম করা যায় না</td><td class="meaning hidden-meaning">দুরতিক্রম</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শত্রুকে/অরিকে হত্যা/বধ করে যে</td><td class="meaning hidden-meaning">শত্রুঘ্ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা সহজে পরিপাক হয় না</td><td class="meaning hidden-meaning">দুর্পাচ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শত্রুকে জয় করে যে</td><td class="meaning hidden-meaning">শত্রুজিৎ/শত্রুঞ্জয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা সহজে মরে না</td><td class="meaning hidden-meaning">দুর্মর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কখনো মৃত্যু হয় না যার</td><td class="meaning hidden-meaning">অমর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা সহজে লাভ করা যায়</td><td class="meaning hidden-meaning">সুলভ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কখনও চিন্তা করা যায় না</td><td class="meaning hidden-meaning">অচিন্ত্য/অচিন্তনীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা সহজে জয় করা যায় না</td><td class="meaning hidden-meaning">অজেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শহরের উপকণ্ঠ</td><td class="meaning hidden-meaning">উপশহর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা সহজে জানা যায় না</td><td class="meaning hidden-meaning">দুর্জ্ঞেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কণ্ঠ পর্যন্ত</td><td class="meaning hidden-meaning">আকণ্ঠ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা সহজে জীর্ণ হয়</td><td class="meaning hidden-meaning">সুপাচ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শ্রদ্ধার যোগ্য</td><td class="meaning hidden-meaning">শ্রদ্ধেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা হতে পারে না</td><td class="meaning hidden-meaning">অসম্ভব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কাচের তৈরি ঘর</td><td class="meaning hidden-meaning">শিশমহল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা জলে ও স্থলে চরে</td><td class="meaning hidden-meaning">উভচর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কাজ শিখছে এমন</td><td class="meaning hidden-meaning">শিক্ষানবিস</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা জলে চরে</td><td class="meaning hidden-meaning">জলচর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কুবেরের ধন রক্ষক</td><td class="meaning hidden-meaning">যক্ষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কুমারীর পুত্র</td><td class="meaning hidden-meaning">কানীন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                            <th>Your Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>যা জয় করা যায় না</td><td class="meaning hidden-meaning">অজয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>খাওয়ার ইচ্ছা</td><td class="meaning hidden-meaning">ক্ষুধা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা নিঃশেষে পান করা হয়েছে</td><td class="meaning hidden-meaning">নিপীত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা বিনা যত্নে লাভ করা গিয়েছে</td><td class="meaning hidden-meaning">অযত্নলব্ধ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা তর্কের দ্বারা মীমাংসা করা যায় না</td><td class="meaning hidden-meaning">অপ্রতর্ক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যাকে দমন করা যায় না</td><td class="meaning hidden-meaning">অদম্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যাকে অকালে জাগরণ করা হয়</td><td class="meaning hidden-meaning">অকালবোধন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যাকে শাসন করা দুঃসাধ্য</td><td class="meaning hidden-meaning">দুঃশাসন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার স্ত্রী মারা গেছেন</td><td class="meaning hidden-meaning">বিধবা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার কোনো উপায় নেই</td><td class="meaning hidden-meaning">নিরুপায়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার কোনো কিছু চাওয়ার নেই</td><td class="meaning hidden-meaning">অকিঞ্চন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার চোখে লজ্জা নেই</td><td class="meaning hidden-meaning">চক্ষুঃশ্মশ্রু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার জ্যোতি বেশিক্ষণ স্থায়ী হয় না</td><td class="meaning hidden-meaning">ক্ষণপ্রভা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার অনুরাগ দূর হয়েছে</td><td class="meaning hidden-meaning">বীতরাগ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার প্রকৃত বর্ণ ধরা যায় না</td><td class="meaning hidden-meaning">বর্ণচোরা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার মূল্য নির্ধারণ করা যায় না</td><td class="meaning hidden-meaning">অমূল্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার সর্বস্ব চুরি হয়ে গেছে</td><td class="meaning hidden-meaning">হৃতসর্বস্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার কিছু নেই</td><td class="meaning hidden-meaning">নিঃস্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যার তুলনা নেই</td><td class="meaning hidden-meaning">অতুলনীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যারা এক মাতার গর্ভে জন্মেছে</td><td class="meaning hidden-meaning">সহোদর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যাহা দেখা যায়</td><td class="meaning hidden-meaning">চক্ষুগোচর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যাহার বুদ্ধি পরিপক্ক হয় নাই</td><td class="meaning hidden-meaning">অপরিপক্ক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ঐতিহাসিক কালের পূর্ববর্তী</td><td class="meaning hidden-meaning">প্রাগৈতিহাসিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যুদ্ধ থেকে যে বীর পালায় না</td><td class="meaning hidden-meaning">সংশপ্তক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যুদ্ধে স্থির থাকেন যিনি</td><td class="meaning hidden-meaning">যুধিষ্ঠির</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>রক্ত দিয়ে রাঙানো হয়েছে এমন</td><td class="meaning hidden-meaning">রক্তরঞ্জিত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শুভ ক্ষণে জন্ম যার</td><td class="meaning hidden-meaning">ক্ষণজন্মা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শুকনো পাতার শব্দ</td><td class="meaning hidden-meaning">মর্মর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ওজন পরিমাপক</td><td class="meaning hidden-meaning">তুলাদণ্ড</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>রাত্রি ও দিবসের সন্ধিক্ষণ</td><td class="meaning hidden-meaning">গোধূলি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হাতির ডাক</td><td class="meaning hidden-meaning">বৃংহতি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হরিণের চর্ম</td><td class="meaning hidden-meaning">অজিন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দ্বীপে জন্ম হয়েছে যার</td><td class="meaning hidden-meaning">দ্বৈপায়ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>চক্ষুর সম্মুখে সংঘটিত</td><td class="meaning hidden-meaning">চাক্ষুষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ছন্দে নিপুণ যিনি</td><td class="meaning hidden-meaning">ছান্দসিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ছয় মাস অন্তর</td><td class="meaning hidden-meaning">ষাণ্মাসিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জ্বলজ্বল করছে যা</td><td class="meaning hidden-meaning">জাজ্বল্যমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জয়ের জন্য যে উৎসব</td><td class="meaning hidden-meaning">জয়োৎসব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সম্মুখে অগ্রসর হয়ে অভ্যর্থনা</td><td class="meaning hidden-meaning">প্রত্যুদগমন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সম্পূর্ণ নতুন</td><td class="meaning hidden-meaning">অভিনব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>গজের মুখের মত মুখ যার</td><td class="meaning hidden-meaning">গজানন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সবার অজ্ঞাতে লুকানো ধন</td><td class="meaning hidden-meaning">গুপ্তধন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>গভীর জ্ঞান</td><td class="meaning hidden-meaning">প্রজ্ঞা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>গভীর রাত্রি</td><td class="meaning hidden-meaning">নিশীথ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>গমন করার ইচ্ছা</td><td class="meaning hidden-meaning">জিগমিষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সমুদ্র থেকে হিমাচল পর্যন্ত</td><td class="meaning hidden-meaning">অসমুদ্রহিমাচল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সমুদ্রের ঢেউ</td><td class="meaning hidden-meaning">উর্মি/কল্লোল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সকলের কাছে খ্যাতি যার</td><td class="meaning hidden-meaning">বিখ্যাত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সকলের জন্য প্রযোজ্য</td><td class="meaning hidden-meaning">সার্বজনীন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সকল পদার্থ ভোজন করে যে</td><td class="meaning hidden-meaning">সর্বভুক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সহজে যা ভেঙে যায়</td><td class="meaning hidden-meaning">ভঙ্গুর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>গ্রহণ করার যোগ্য</td><td class="meaning hidden-meaning">গ্রহণীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পাপের খোলস</td><td class="meaning hidden-meaning">নির্মোক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সাক্ষাৎ দ্রষ্টা</td><td class="meaning hidden-meaning">সাক্ষী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সীমাবদ্ধ জ্ঞানের অধিকারী</td><td class="meaning hidden-meaning">কূপমণ্ডুক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>গণনার যোগ্য নয় যা</td><td class="meaning hidden-meaning">নগণ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ঘরের অভাব</td><td class="meaning hidden-meaning">হালঘর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হরেক রকম বলে যে</td><td class="meaning hidden-meaning">মহরবোলা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হরণ করিবার ইচ্ছা</td><td class="meaning hidden-meaning">জিহীর্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হাতি রাখার স্থান</td><td class="meaning hidden-meaning">পিলখানা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হাতির বাসস্থান</td><td class="meaning hidden-meaning">গজগৃহ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হাতির শাবক</td><td class="meaning hidden-meaning">করভ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কিছুতে ভয় নেই এমন</td><td class="meaning hidden-meaning">অকুতোভয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সিংহের ডাক</td><td class="meaning hidden-meaning">হুঙ্কার</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হিত করিবার ইচ্ছা</td><td class="meaning hidden-meaning">হিতৈষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হিত চিন্তা করে যে</td><td class="meaning hidden-meaning">হিতৈষী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>চিরস্থায়ী নয় যা</td><td class="meaning hidden-meaning">নশ্বর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>চিরকাল ধরে যা জ্বলছে</td><td class="meaning hidden-meaning">জাজ্বল্যমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>চিবিয়ে ও চুষে খেতে হয় এমন</td><td class="meaning hidden-meaning">চর্বাচুষ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ডালিমের কুঁড়ি</td><td class="meaning hidden-meaning">আনারকলি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>টঢিপির মতো চ্যাপ্টা</td><td class="meaning hidden-meaning">-</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>তিনটি ফলের সমাহার</td><td class="meaning hidden-meaning">ত্রিফলা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ক্ষমার যোগ্য</td><td class="meaning hidden-meaning">ক্ষমার</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ক্ষুদ্র বাগান</td><td class="meaning hidden-meaning">স্বাগিচা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>তল স্পর্শ করা যায় না যার</td><td class="meaning hidden-meaning">অতলস্পর্শী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                            <th>Your Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>জন্মকাল হতে</td><td class="meaning hidden-meaning">জন্মাবধি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>তর্ক করে যে</td><td class="meaning hidden-meaning">তার্কিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জলপ্রবাহের ধ্বনি</td><td class="meaning hidden-meaning">ঝলঝলানি/কলকল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>তীর নিক্ষেপে ওস্তাদ</td><td class="meaning hidden-meaning">তীরন্দাজ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জানতে ইচ্ছুক/জানার ইচ্ছা</td><td class="meaning hidden-meaning">জিজ্ঞাসা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জানা উচিত যা</td><td class="meaning hidden-meaning">জ্ঞেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি বক্তৃতায় পটু</td><td class="meaning hidden-meaning">বাগ্মী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জানা যায় না যা</td><td class="meaning hidden-meaning">অজ্ঞেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ফল পাকলে যে গাছ মরে যায়</td><td class="meaning hidden-meaning">ওষধি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জায়া ও পতি</td><td class="meaning hidden-meaning">দম্পতি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>কুকুরের ডাক</td><td class="meaning hidden-meaning">ভুকভুক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হৃদয়ের প্রীতিকর</td><td class="meaning hidden-meaning">হৃদয়ঙ্গম</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হনন করার ইচ্ছা</td><td class="meaning hidden-meaning">জিঘাংসা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দিনে একবার আহার করে যে</td><td class="meaning hidden-meaning">একাহারী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>একই গুরুর শিষ্য</td><td class="meaning hidden-meaning">সতীর্থ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দিনের শেষ ভাগ</td><td class="meaning hidden-meaning">অপরাহ্ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নদীর ভাঙনে সর্বশান্ত জনগণ</td><td class="meaning hidden-meaning">নদীসিকস্তি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দিনের আলো ও রাতের আধার</td><td class="meaning hidden-meaning">গোধূলী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বৃষ্টির জল</td><td class="meaning hidden-meaning">শীকর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দিনের পূর্বভাগ</td><td class="meaning hidden-meaning">পূর্বাহ্ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>অন্তিম কাল উপস্থিত যার</td><td class="meaning hidden-meaning">মুমূর্ষু</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দিনের মধ্য ভাগ</td><td class="meaning hidden-meaning">মধ্যাহ্ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা খুব শীতল বা উষ্ণ নয়</td><td class="meaning hidden-meaning">নাতিশীতোষ্ণ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>দিবসের প্রথম ভাগ</td><td class="meaning hidden-meaning">পূর্বাহ্ন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ইহলোক বিষয়ক</td><td class="meaning hidden-meaning">ইহলৌকিক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নিন্দা করার অযোগ্য</td><td class="meaning hidden-meaning">অনিন্দ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যা পূর্বে ছিল এখন নেই</td><td class="meaning hidden-meaning">ভূতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নিজেদের পরিচালিত শাসন</td><td class="meaning hidden-meaning">স্বায়ত্তশাসন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>আমি, তুমি ও সে - আমরা</td><td class="meaning hidden-meaning">-</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নিজেই পতি নির্বাচন করে যে</td><td class="meaning hidden-meaning">স্বয়ংবরা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>তুলার তৈরি</td><td class="meaning hidden-meaning">তুলোট</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নিজকে পন্ডিত মনে করে যে</td><td class="meaning hidden-meaning">পন্ডিতম্মন্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি বিদ্যা লাভ করেছেন</td><td class="meaning hidden-meaning">কৃতবিদ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>প্রিয় কাজ করবার ইচ্ছা</td><td class="meaning hidden-meaning">প্রিয়চিকীর্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>সমুদ্রের ঢেউয়ের শব্দ</td><td class="meaning hidden-meaning">কল্লোল</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পিতার ভ্রাতা</td><td class="meaning hidden-meaning">পিতৃব্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শোনা মাত্র মনে রাখতে পারে</td><td class="meaning hidden-meaning">শ্রুতিধর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>পিতার পিতা</td><td class="meaning hidden-meaning">পিতামহ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে ক্রমাগত রোদন করছে</td><td class="meaning hidden-meaning">রোরুদ্যমান</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বিদেশে থাকে যে</td><td class="meaning hidden-meaning">প্রবাসী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যে মেয়ের বিয়ে হয়নি</td><td class="meaning hidden-meaning">অনূঢ়া</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বিনা যত্নে উৎপন্ন</td><td class="meaning hidden-meaning">অযত্নসম্ভূত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ইন্দ্রিয়কে জয় করেছে যে</td><td class="meaning hidden-meaning">জিতেন্দ্রিয়</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বিশ্বজনের জন্য হিতকর</td><td class="meaning hidden-meaning">বিশ্বজনীন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>এইমাত্র জন্মগ্রহণ করেছে যে</td><td class="meaning hidden-meaning">নবজাতক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বিহঙ্গের ধ্বনি</td><td class="meaning hidden-meaning">কূজন</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>নৌকা চালনা করে যে</td><td class="meaning hidden-meaning">মাঝি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বিচার না করে কাজ করেন যিনি</td><td class="meaning hidden-meaning">সত্বর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বরণ করার যোগ্য</td><td class="meaning hidden-meaning">বরেণ্য</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বিজয় লাভের ইচ্ছা</td><td class="meaning hidden-meaning">বিজিগীষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>হনন করার ইচ্ছা</td><td class="meaning hidden-meaning">জিঘাংসা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>জয় করার ইচ্ছা</td><td class="meaning hidden-meaning">জিগীষা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শুভ ক্ষণে জন্ম যার</td><td class="meaning hidden-meaning">ক্ষণজন্মা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ময়ূরের ডাক</td><td class="meaning hidden-meaning">কেকা</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি এসেছেন অথচ অপরিচিত</td><td class="meaning hidden-meaning">আগন্তুক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ভিতর থেকে গোপনে ক্ষতিসাধন</td><td class="meaning hidden-meaning">অন্তর্ঘাত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি সব জানেন</td><td class="meaning hidden-meaning">সর্বজ্ঞ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>মিথ্যা ধারণা</td><td class="meaning hidden-meaning">ভ্রান্তি</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি বিচার করেন</td><td class="meaning hidden-meaning">বিচারক</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি অনেক দেখেছেন</td><td class="meaning hidden-meaning">ভূয়োদর্শী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>শিশুর পক্ষে যাহা সম্ভবপর</td><td class="meaning hidden-meaning">শিশুসুলভ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি প্রথমে পথ দেখান</td><td class="meaning hidden-meaning">পথপ্রদর্শক/পথিকৃৎ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি প্রতিষ্ঠা লাভ করেছেন</td><td class="meaning hidden-meaning">লব্ধপ্রতিষ্ঠ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>যিনি বক্তব্য দানে পটু</td><td class="meaning hidden-meaning">বাগ্মী</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>ভিক্ষার অভাব</td><td class="meaning hidden-meaning">দুর্ভিক্ষ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                    </tbody>
+                </table>
+
+
+                    
+            </div>
+
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+
+</html>

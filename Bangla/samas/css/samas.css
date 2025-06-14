@@ -1,0 +1,39 @@
+.firstb{
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+
+  
+    .t-center{
+      text-align: center;
+    }
+    
+    .mainContent{
+      margin-top: 40px;
+      
+      display: flex;
+      flex-direction: row;
+  
+      width: 100%;
+    }
+
+    .bohubreehisamas{
+      margin-left: 2.25%;
+    width: 45%;
+    border: 2px solid black;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(218, 243, 235);
+  }
+  
