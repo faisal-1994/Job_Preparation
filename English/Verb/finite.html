@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finite Verb</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body class="bg-info">
+    <!-- Add this inside your main container for Finite Verb classification -->
+<div class="container-fluid py-4">
+    <h3 class="border border-3 text-center mb-4 offset-4 col-5 bg-dark text-light">Finite Verb</h3>
+    <p class="border bg-success text-center text-light offset-4 col-5">Finite Verb দ্বারা বাক্যের Tense, Person, এবং Number নির্ণয় করা যায়।</p>
+    <div class="row justify-content-center">
+        <!-- Main Verb Card -->
+        <div class="col-12  mb-4">
+            <div class="card border-info h-100 shadow">
+                <div class="card-header bg-info text-dark text-center">
+                    <h4 class="mb-0">Main Verb</h4>
+                </div>
+                <div class="card-body">
+                    <div class="subDiv d-flex flex-wrap gap-3 justify-content-center">
+                        <!-- Transitive Verb -->
+                        <div class="card border-primary col-12  mb-3 shadow">
+                            <h6 class="bg-secondary text-light text-center rounded py-1">Transitive Verb</h6>
+                            <p class="mt-2 text-secondary">
+                                <b>Definition:</b> যে Verb এর পরে Object থাকে।<br>
+                                <b>Example:</b> He <span class="text-danger">reads</span> a book.
+                            </p>
+                        </div>
+                        <!-- Intransitive Verb -->
+                        <div class="card border-primary col-12  mb-3 shadow">
+                            <h6 class="bg-secondary text-light text-center rounded py-1">Intransitive Verb</h6>
+                            <p class="mt-2 text-secondary">
+                                <b>Definition:</b> যে Verb এর পরে Object থাকে না।<br>
+                                <b>Example:</b> Birds <span class="text-danger">fly</span>.
+                            </p>
+                        </div>
+                        <!-- Linking Verb -->
+                        <div class="card border-primary col-12  mb-3 shadow">
+                            <h6 class="bg-secondary text-light text-center rounded py-1">Linking Verb</h6>
+                            <p class="mt-2 text-secondary">
+                                <b>Definition:</b> Subject কে Complement এর সাথে যুক্ত করে।<br>
+                                <b>Example:</b> She <span class="text-danger">is</span> happy.
+                            </p>
+                        </div>
+                        <!-- Causative Verb -->
+                        <div class="card border-primary col-12  mb-3 shadow">
+                            <h6 class="bg-secondary text-light text-center rounded py-1">Causative Verb</h6>
+                            <p class="mt-2 text-secondary">
+                                <b>Definition:</b> অন্য কাউকে দিয়ে কাজ করানো বোঝায়।<br>
+                                <b>Example:</b> He <span class="text-danger">made</span> me cry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Auxiliary Verb Card -->
+        <div class="col-12 mb-4">
+            <div class="card border-success h-100 shadow">
+                <div class="card-header bg-success text-light text-center">
+                    <h4 class="mb-0">Auxiliary Verb</h4>
+                </div>
+                <div class="card-body">
+                    <div class="subDiv d-flex flex-wrap gap-3 justify-content-center">
+                        <!-- To Be Verb -->
+                        <div class="card border-warning col-12 col-md-5 mb-3 shadow">
+                            <h6 class="bg-secondary text-light text-center rounded py-1">To Be Verb</h6>
+                            <p class="mt-2 text-secondary">
+                                <b>is, am, are, was, were, be, being, been</b><br>
+                                <b>Example:</b> He <span class="text-danger">is</span> a student.
+                            </p>
+                        </div>
+                        <!-- To Do Verb -->
+                        <div class="card border-warning col-12 col-md-5 mb-3 shadow">
+                            <h6 class="bg-secondary text-light text-center rounded py-1">To Do Verb</h6>
+                            <p class="mt-2 text-secondary">
+                                <b>do, does, did</b><br>
+                                <b>Example:</b> I <span class="text-danger">do</span> my homework.
+                            </p>
+                        </div>
+                        <!-- To Have Verb -->
+                        <div class="card border-warning col-12 col-md-5 mb-3 shadow">
+                            <h6 class="bg-secondary text-light text-center rounded py-1">To Have Verb</h6>
+                            <p class="mt-2 text-secondary">
+                                <b>have, has, had</b><br>
+                                <b>Example:</b> She <span class="text-danger">has</span> a car.
+                            </p>
+                        </div>
+                        <!-- Modal Verb -->
+                        <div class="card border-warning col-12 col-md-5 mb-3 shadow">
+                            <h6 class="bg-secondary text-light text-center rounded py-1">Modal Verb</h6>
+                            <p class="mt-2 text-secondary">
+                                <b>can, could, may, might, must, should, will, would</b><br>
+                                <b>Example:</b> You <span class="text-danger">should</span> study.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

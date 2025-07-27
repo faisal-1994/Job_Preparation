@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>এক কথায় প্রকাশ</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/syle.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+    </head>
+
+    <body>
+        <h4 class="indexTitle offset-11 col-1"><a href="./index.html">Practice</a></h4>
+
+        <div class="container mt-5">
+            <h3 class="text-center mb-4">বাংলা এক কথায় প্রকাশ</h3>
+
+            <div class="table-responsive col-8 m-auto">
+                <button onclick="showNextMeaning()" id="nextBtn" style="margin: 10px; padding: 10px 20px;">Next</button>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>বাক্যাংশ</th>
+                        <th>এক কথায় প্রকাশ</th>
+                    </tr>
+                    </thead>
+                    <tbody id="phrase-table">
+                        <tr><td>আকাশে উড়ে যে</td><td class="meaning hidden-meaning2">খেচর</td> </tr>
+                        <tr><td>আকাশ ও পৃথিবীর অন্তরাল</td><td class="meaning hidden-meaning2">ক্রন্দসী</td> </tr>
+                        <tr><td>যা খুব শীতল বা উষ্ণ নয়</td><td class="meaning hidden-meaning2">নাতিশীতোষ্ণ</td> </tr>
+                        <tr><td>একই গুরুর শিষ্য</td><td class="meaning hidden-meaning2">সতীর্থ</td> </tr>
+                        <tr><td>যা ক্রমশ বিস্তীর্ণ হচ্ছে</td><td class="meaning hidden-meaning2">ক্রমবিকাশমান</td> </tr>
+                        <tr><td>যার দাড়ি গোঁফ ওঠেনি</td><td class="meaning hidden-meaning2">অজাতশ্মশ্রু</td> </tr>
+                        <tr><td>মরমর হয়েছে যে</td><td class="meaning hidden-meaning2">মর্মর</td> </tr>
+                        <tr><td>যিনি প্রথম পথ দেখান</td><td class="meaning hidden-meaning2">পথিকৃৎ</td> </tr>
+                        <tr><td>নুপুরের ধ্বনি</td><td class="meaning hidden-meaning2">নূপুরনাদ</td> </tr>
+                        <tr><td>বাঁদের চামড়া</td><td class="meaning hidden-meaning2">চর্ম</td> </tr>
+                        <tr><td>যার সর্বস্ব চুরি হয়ে গেছে</td><td class="meaning hidden-meaning2">হৃতসর্বস্ব</td> </tr>
+                        <tr><td>ভোজন করার ইচ্ছা</td><td class="meaning hidden-meaning2">বুভুক্ষা</td> </tr>
+                        <tr><td>যা পান করার অযোগ্য</td><td class="meaning hidden-meaning2">অপেয়</td> </tr>
+                        <tr><td>রাত্রিকালীন যুদ্ধ</td><td class="meaning hidden-meaning2">নিশীথযুদ্ধ</td> </tr>
+                        <tr><td>দিনের মধ্যভাগ</td><td class="meaning hidden-meaning2">মধ্যাহ্ন</td> </tr>
+                        <tr><td>কোকিলের ডাক</td><td class="meaning hidden-meaning2">কুহু</td> </tr>
+                        <tr><td>দান করার ইচ্ছা</td><td class="meaning hidden-meaning2">দীক্ষা</td> </tr>
+                        <tr><td>শুকনো পাতার শব্দ</td><td class="meaning hidden-meaning2">মর্মর</td> </tr>
+                        <tr><td>ময়ূরের ডাক</td><td class="meaning hidden-meaning2">কেকা</td> </tr>
+                        <tr><td>যা অভিক্রম করা যায় না</td><td class="meaning hidden-meaning2">অনভিক্রম্য</td> </tr>
+                        <tr><td>যা পূর্বে শোনা যায়নি</td><td class="meaning hidden-meaning2">অশ্রুতপূর্ব</td> </tr>
+                        <tr><td>হনন করিবার ইচ্ছা</td><td class="meaning hidden-meaning2">জিঘাংসা</td> </tr>
+                        <tr><td>দমন করা যায় না যা</td><td class="meaning hidden-meaning2">অদম্য</td> </tr>
+                        <tr><td>দমন করা কষ্টকর যাকে</td><td class="meaning hidden-meaning2">দুর্দমনীয়</td> </tr>
+                        <tr><td>যার অন্য কোন উপায় নেই</td><td class="meaning hidden-meaning2">অনন্যোপায়</td> </tr>
+                        <tr><td>অন্তিমকাল উপস্থিত যার</td><td class="meaning hidden-meaning2">মুমূর্ষু</td> </tr>
+                        <tr><td>দান করার যোগ্য</td><td class="meaning hidden-meaning2">দেয়/দাতব্য</td> </tr>
+                        <tr><td>অল্প কথা বলে যে</td><td class="meaning hidden-meaning2">মিতভাষী</td> </tr>
+                        <tr><td>আপনাকে যে ভুলে থাকে</td><td class="meaning hidden-meaning2">আত্মভোলা</td> </tr>
+                        <tr><td>আকাশে চড়ে যে</td><td class="meaning hidden-meaning2">আকাশচারী/খেচর</td> </tr>
+                        <tr><td>বলা হয়েছে যা</td><td class="meaning hidden-meaning2">উক্ত</td> </tr>
+                        <tr><td>পূর্বে যা ঘটেনি</td><td class="meaning hidden-meaning2">অভূতপূর্ব</td> </tr>
+                        <tr><td>একবার ফল দিয়ে যে গাছ মরে যায়</td><td class="meaning hidden-meaning2">ওষধি</td> </tr>
+                        <tr><td>দুই নদীর মধ্যবতী স্থান</td><td class="meaning hidden-meaning2">দোয়াব</td> </tr>
+                        <tr><td>দুইবার জন্মে যে</td><td class="meaning hidden-meaning2">দ্বিজ</td> </tr>
+                        <tr><td>দুবার ফসল হয় যে জমিতে</td><td class="meaning hidden-meaning2">দোফসলি</td> </tr>
+                        <tr><td>স্থায়ী ঠিকানা নেই যার</td><td class="meaning hidden-meaning2">উদ্বাস্ত</td> </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr><td>যাকে অকালে জাগরণ করা হয়</td><td class="meaning hidden-meaning2">অকালবোধন</td> </tr>
+                        <tr><td>গুণের মূল্য যিনি দেন</td><td class="meaning hidden-meaning2">গুণগ্রাহী</td> </tr>
+                        <tr><td>ক্রমে যাহা আসিতেছে</td><td class="meaning hidden-meaning2">ক্রমানুসারে</td> </tr>
+                        <tr><td>বেঁচে থাকার ইচ্ছা</td><td class="meaning hidden-meaning2">জিজীবিষা</td> </tr>
+                        <tr><td>ক্ষমা পাওয়ার যোগ্য</td><td class="meaning hidden-meaning2">ক্ষমার</td> </tr>
+                        <tr><td>ভোজন করার ইচ্ছা</td><td class="meaning hidden-meaning2">বুভুক্ষু</td> </tr>
+                        <tr><td>ক্ষমা করার ইচ্ছা</td><td class="meaning hidden-meaning2">তিতিক্ষা</td> </tr>
+                        <tr><td>মেঘের ধ্বনি</td><td class="meaning hidden-meaning2">জীমূতমন্ত্র</td> </tr>
+                        <tr><td>ক্ষতিপুরণের জন্য প্রদত্ত অর্থাদি</td><td class="meaning hidden-meaning2">খেসারত</td> </tr>
+                        <tr><td>যে স্ত্রী বশীভূত</td><td class="meaning hidden-meaning2">স্ত্রেণ</td> </tr>
+                        <tr><td>ক্ষুধা দ্বারা পীড়িত</td><td class="meaning hidden-meaning2">ক্ষুধার্ত</td> </tr>
+                        <tr><td>যে মেঘে প্রচুর বৃষ্টি হয়</td><td class="meaning hidden-meaning2">সংবর্ত</td> </tr>
+                        <tr><td>থেমে চলার যে ভঙ্গি</td><td class="meaning hidden-meaning2">ঠমক</td> </tr>
+                        <tr><td>যে বিষয়ে কোনো বিতর্ক নেই</td><td class="meaning hidden-meaning2">অবিসংবাদী</td> </tr>
+                        <tr><td>দেশের প্রতি প্রেম আছে যার</td><td class="meaning hidden-meaning2">দেশপ্রেমিক</td> </tr>
+                        <tr><td>যে নারী অন্যের নিন্দা করে না/যে নারীর হিংসা নেই</td><td class="meaning hidden-meaning2">অনসূয়া</td> </tr>
+                        <tr><td>পৌষ মাসে উৎপন্ন ফসল</td><td class="meaning hidden-meaning2">পৌষালি</td> </tr>
+                        <tr><td>বেলাকে অতিক্রান্ত</td><td class="meaning hidden-meaning2">উদ্বেল</td> </tr>
+                        <tr><td>যে নারী কখনো সূর্য দেখেনি</td><td class="meaning hidden-meaning2">অসূর্যস্পশ্যা</td> </tr>
+                        <tr><td>বেঁচে আছে যা</td><td class="meaning hidden-meaning2">জীবিত</td> </tr>
+                        <tr><td>যে নারীর স্বামী ও পুত্র নেই/যে নারীর স্বামীও নেই সন্তানও নেই</td><td class="meaning hidden-meaning2">অবীরা</td> </tr>
+                        <tr><td>জীবিত থেকেও যে মৃত</td><td class="meaning hidden-meaning2">জীবন্মৃত</td> </tr>
+                        <tr><td>যে পুরুষের স্ত্রী বিদেশে থাকে</td><td class="meaning hidden-meaning2">প্রোষিতপত্মীক</td> </tr>
+                        <tr><td>যে ব্যক্তি অন্যের রচনা ভাব বা ভাষা নিজের নামে চালায়</td><td class="meaning hidden-meaning2">কুষ্ঠিলক</td> </tr>
+                        <tr><td>যে মেয়ের বিয়ে হয়নি/যে নারীর বিয়ে হয়নি</td><td class="meaning hidden-meaning2">অনূঢ়া</td> </tr>
+                        <tr><td>যে রোগ নির্ণয় করতে হাতড়ে মরে</td><td class="meaning hidden-meaning2">হাতুড়ে</td> </tr>
+                        <tr><td>যে যন্ত্রের সাহায্যে ওজন পরিমাপ করা হয়</td><td class="meaning hidden-meaning2">তুলাদণ্ড</td> </tr>
+                        <tr><td>যে কোন বিষয়ে স্পৃহা হারিয়েছে যে</td><td class="meaning hidden-meaning2">বীতস্পৃহ</td> </tr>
+                        <tr><td>যে শুনেই মনে রাখতে পারে</td><td class="meaning hidden-meaning2">শ্রুতিধর</td> </tr>
+                        <tr><td>যে নারী বীর</td><td class="meaning hidden-meaning2">বীরাঙ্গনা</td> </tr>
+                        <tr><td>সব হারিয়েছে / যার সর্বস্ব হারিয়ে গেছে</td><td class="meaning hidden-meaning2">সর্বহারা</td> </tr>
+                        <tr><td>যে নারী সাগরে বিচরণ করে</td><td class="meaning hidden-meaning2">সাগরিকা</td> </tr>
+                        <tr><td>যে জয়লাভে দৃঢ় প্রতিজ্ঞ</td><td class="meaning hidden-meaning2">সংশপ্তক</td> </tr>
+                        <tr><td>যে নারী নিজে বর বরণ করে নেয়</td><td class="meaning hidden-meaning2">স্বয়ংবরা</td> </tr>
+                        <tr><td>যে নারী প্রিয় বাক্য বলে</td><td class="meaning hidden-meaning2">প্রিয়ভাষী</td> </tr>
+                        <tr><td>যে নারীর হাসি সুন্দর</td><td class="meaning hidden-meaning2">সুস্মিতা</td> </tr>
+                        <tr><td>যে নারীর স্বামী ও পুত্র মৃত</td><td class="meaning hidden-meaning2">অবীরা</td> </tr>
+                        <tr><td>পুনঃপুন রোদন করছে যে</td><td class="meaning hidden-meaning2">রোদ্যমান</td> </tr>
+                        <tr><td>কেবল নিজেকে নিয়ে ব্যস্ত থাকেন যিনি</td><td class="meaning hidden-meaning2">আত্মনিষ্ঠ</td> </tr>
+                        <tr><td>যে নারীর সম্প্রতি বিয়ে হয়েছে</td><td class="meaning hidden-meaning2">নবোঢ়া</td> </tr>
+                        <tr><td>শোভন হৃদয় যার</td><td class="meaning hidden-meaning2">সুহৃদ</td> </tr>
+                        <tr><td>ঘোড়া রাখার স্থান</td><td class="meaning hidden-meaning2">ঘোরাশাল</td> </tr>
+                        <tr><td>ঘোড়ার ডাক/অশ্বের ডাক</td><td class="meaning hidden-meaning2">হেষা</td> </tr>
+                        <tr><td>যে ব্যক্তি পূর্বজন্মের কথা স্মরণ করতে পারে</td><td class="meaning hidden-meaning2">জাতিস্মর</td> </tr>
+                        <tr><td>চোখের কোণ</td><td class="meaning hidden-meaning2">অপাঙ্খ</td> </tr>
+                        <tr><td>যে বন হিংস্র জন্তুতে পরিপূর্ণ</td><td class="meaning hidden-meaning2">শ্বাপদসংকুল</td> </tr>
+                        <tr><td>জেনেও যে পাপ করে</td><td class="meaning hidden-meaning2">জ্ঞানপাপী</td> </tr>
+                        <tr><td>চৈত্র মাসের ফসল</td><td class="meaning hidden-meaning2">চৈতালি</td> </tr>
+                        <tr><td>অর্থ নেই যার</td><td class="meaning hidden-meaning2">নিরর্থক</td> </tr>
+                        <tr><td>অর্থহীন উক্তি</td><td class="meaning hidden-meaning2">প্রলাপ</td> </tr>
+                        <tr><td>অন্যের লেখা চুরি করে এমন</td><td class="meaning hidden-meaning2">কুষ্ঠিলক</td> </tr>
+                        <tr><td>অনেকের মধ্যে একজন</td><td class="meaning hidden-meaning2">অন্যতম</td> </tr>
+                        <tr><td>যে গাছ অন্য গাছকে আশ্রয় করে বাঁচে</td><td class="meaning hidden-meaning2">পরগাছা</td> </tr>
+                        <tr><td>ধনের দেবতা</td><td class="meaning hidden-meaning2">কুবের</td> </tr>
+                        <tr><td>যে গাছের বিস্তর ছায়া হয়</td><td class="meaning hidden-meaning2">ছায়াতরু</td> </tr>
+                        <tr><td>অনেক দেখেছে যে</td><td class="meaning hidden-meaning2">ভূয়োদর্শী</td> </tr>
+                        <tr><td>যে সুপথ থেকে কুপথে যায়</td><td class="meaning hidden-meaning2">উন্মার্গগামী</td> </tr>
+                        <tr><td>অনেক দেখেছে যে</td><td class="meaning hidden-meaning2">বহুদর্শী</td> </tr>
+                        <tr><td>যেখানে বেশি কথা বলা হয়েছে</td><td class="meaning hidden-meaning2">অতিরঞ্জিত</td> </tr>
+                        <tr><td>অশ্বের ডাক</td><td class="meaning hidden-meaning2">হেষা</td> </tr>
+                        <tr><td>কোথাও উঁচু কোথাও নীচু</td><td class="meaning hidden-meaning2">বন্ধুর</td> </tr>
+                        <tr><td>অগ্রে গমন করে যে</td><td class="meaning hidden-meaning2">অগ্রগামী/অগ্রজ</td> </tr>
+                        <tr><td>কোনোভাবেই যা নির্বারণ করা যায় না</td><td class="meaning hidden-meaning2">অনিবার্য</td> </tr>
+                        <tr><td>শোক দ্বারা আতুর</td><td class="meaning hidden-meaning2">শোকাতুর</td> </tr>
+                        <tr><td>কোকিলের ডাক</td><td class="meaning hidden-meaning2">কুহু</td> </tr>
+                        <tr><td>অধরপ্রান্তের হাসি</td><td class="meaning hidden-meaning2">বক্রোষ্ঠিকামর</td> </tr>
+                        <tr><td>খেয়া পার করে যে</td><td class="meaning hidden-meaning2">পাটনী</td> </tr>
+                        <tr><td>অন্য দেশ</td><td class="meaning hidden-meaning2">দেশান্তর</td> </tr>
+                        <tr><td>সেবা করিবার ইচ্ছা</td><td class="meaning hidden-meaning2">শুশ্রুষা</td> </tr>
+                        <tr><td>অন্য ভাষায় অনুবাদ/উদিত হয়নি যাহ</td><td class="meaning hidden-meaning2">অনুদিত</td> </tr>
+                        <tr><td>অন্য যুগ</td><td class="meaning hidden-meaning2">যুগান্তর</td> </tr>
+                        <tr><td>অন্য গ্রাম</td><td class="meaning hidden-meaning2">গ্রামান্তর</td> </tr>
+                    </tbody>
+
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+
+                    <thead class="table-dark">
+                     <tr>
+                    <th>বাক্যাংশ</th>
+                    <th>এক কথায় প্রকাশ</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr><td>গোপন করার ইচ্ছা</td><td class="meaning hidden-meaning2">জুগুলা</td> </tr>
+                    <tr><td>অন্য দিকে মন দেয় না</td><td class="meaning hidden-meaning2">অনন্যমনা</td> </tr>
+                    <tr><td>ঘোড়া রাখার জায়গা</td><td class="meaning hidden-meaning2">ঘোড়াশাল</td> </tr>
+                    <tr><td>অন্য দিকে মন নেই যার</td><td class="meaning hidden-meaning2">অন্যমনা</td> </tr>
+                    <tr><td>চোখের দ্বারা গৃহীত</td><td class="meaning hidden-meaning2">গোচর</td> </tr>
+                    <tr><td>অন্যলোক</td><td class="meaning hidden-meaning2">লোকান্তর</td> </tr>
+                    <tr><td>চোখের কোণ</td><td class="meaning hidden-meaning2">অপাঙ্খ</td> </tr>
+                    <tr><td>অনকের মধ্যে একজন</td><td class="meaning hidden-meaning2">অন্যতম</td> </tr>
+                    <tr><td>টোল পড়েনি এমন</td><td class="meaning hidden-meaning2">নিটোল</td> </tr>
+                    <tr><td>অনায়াসে যা লাভ করা যায়</td><td class="meaning hidden-meaning2">অনায়াসলভ্য</td> </tr>
+                    <tr><td>যা বলা হয়নি</td><td class="meaning hidden-meaning2">অনুক্ত</td> </tr>
+                    <tr><td>অনুকরণে ইচ্ছুক</td><td class="meaning hidden-meaning2">অনুচিকীর্ষা</td> </tr>
+                    <tr><td>দেহে মনে ও কথায়</td><td class="meaning hidden-meaning2">কায়মনোবাক্যে</td> </tr>
+                    <tr><td>অনুকরণ করা যায় এমন</td><td class="meaning hidden-meaning2">অনুকরণীয়</td> </tr>
+                    <tr><td>দেখবার ইচ্ছা</td><td class="meaning hidden-meaning2">দিদৃক্ষা</td> </tr>
+                    <tr><td>অনুসন্ধান করতে ইচ্ছুক</td><td class="meaning hidden-meaning2">অনুসন্ধিৎসু</td> </tr>
+                    <tr><td>অনুসন্ধান করার ইচ্ছা</td><td class="meaning hidden-meaning2">অনুসন্ধিৎসা</td> </tr>
+                    <tr><td>নদীর বালুকাময় তট</td><td class="meaning hidden-meaning2">সৈকত</td> </tr>
+                    <tr><td>অপকার করতে ইচ্ছুক</td><td class="meaning hidden-meaning2">অপচিকীর্যু</td> </tr>
+                    <tr><td>নূপুরের ধ্বনি</td><td class="meaning hidden-meaning2">নিকুণ</td> </tr>
+                    <tr><td>অপকার করিবার ইচ্ছা</td><td class="meaning hidden-meaning2">অপচিকীর্ষা</td> </tr>
+                    <tr><td>যে সকল অত্যাচার সয়ে যায়</td><td class="meaning hidden-meaning2">সর্বংসহা</td> </tr>
+                    <tr><td>অবসরজ্ঞায় নাক উঁচু করে যে</td><td class="meaning hidden-meaning2">উন্নাসিক</td> </tr>
+                    <tr><td>লাভ করার ইচ্ছা</td><td class="meaning hidden-meaning2">লিজা</td> </tr>
+                    <tr><td>ভ্রমরের ধ্বনি</td><td class="meaning hidden-meaning2">গুঞ্জন</td> </tr>
+                    <tr><td>ইন্দ্র কে জয় করিয়াছে যে</td><td class="meaning hidden-meaning2">ইন্দ্রজিৎ</td> </tr>
+                    <tr><td>অল্প বয়স যাহার</td><td class="meaning hidden-meaning2">তরুণ বয়স্ক</td> </tr>
+                    <tr><td>ইষৎ আমিষ গন্ধ বিশিষ্ট</td><td class="meaning hidden-meaning2">আঁষটে</td> </tr>
+                    <tr><td>অল্প কথা বলে যে</td><td class="meaning hidden-meaning2">মিতভাষী</td> </tr>
+                    <tr><td>ইষৎ পীত বর্ণ</td><td class="meaning hidden-meaning2">পীতাভ</td> </tr>
+                    <tr><td>অরণ্যের অগ্নিকান্ড</td><td class="meaning hidden-meaning2">দাবানল</td> </tr>
+                    <tr><td>নষ্ট হওয়া স্বভাব যার</td><td class="meaning hidden-meaning2">নষ্ট</td> </tr>
+                    <tr><td>তল্পকাল বাস করে যে</td><td class="meaning hidden-meaning2">অগন্তুক</td> </tr>
+                    <tr><td>ইতিহাস রচনা করেন যিনি</td><td class="meaning hidden-meaning2">ঐতিহাসিক</td> </tr>
+                    <tr><td>অলংকারের ব্যংকার</td><td class="meaning hidden-meaning2">শিল্পন</td> </tr>
+                    <tr><td>ইতিহাস বিষয়ে অভিজ্ঞ যিনি</td><td class="meaning hidden-meaning2">ইতিহাসবেত্তা</td> </tr>
+                    <tr><td>অকালে পাকিয়া গিয়াছে যাহা/অকালে পেকেছে যা</td><td class="meaning hidden-meaning2">অকালপক্ব</td> </tr>
+                    <tr><td>নুপুরের ধ্বনি</td><td class="meaning hidden-meaning2">নিকুণ</td> </tr>
+                    <tr><td>অসম সাহস যাহার</td><td class="meaning hidden-meaning2">অসমসাহসী</td> </tr>
+                    <tr><td>নতুন সূর্য</td><td class="meaning hidden-meaning2">নবারুণ</td> </tr>
+                    <tr><td>অগ্র পশ্চাৎ বিবেচনা করে কাজ করে যে</td><td class="meaning hidden-meaning2">বিমৃষ্যকারী</td> </tr>
+                    <tr><td>পূর্বজন্ম স্মরণ করে যে</td><td class="meaning hidden-meaning2">জাতিস্মর</td> </tr>
+                    <tr><td>অগ্রসর হয়ে অভ্যর্থনা</td><td class="meaning hidden-meaning2">প্রত্যুদগমন</td> </tr>
+                    <tr><td>পক্ষের ন্যায় অক্ষি বা চোখ</td><td class="meaning hidden-meaning2">পুডরীকাক্ষ</td> </tr>
+                    <tr><td>অহংকার নেই যার</td><td class="meaning hidden-meaning2">নিরহংকার</td> </tr>
+                    <tr><td>পরের অন্নে বেঁচে থাকে</td><td class="meaning hidden-meaning2">পরজীবী</td> </tr>
+                    <tr><td>অন্তরের ভাব জানেন যিনি</td><td class="meaning hidden-meaning2">অন্তর্যামী</td> </tr>
+                    <tr><td>পরের অয়ে জীবন ধারণ করে যে</td><td class="meaning hidden-meaning2">পরান্নজীবী</td> </tr>
+                    <tr><td>আদব কায়দা জানে না যে</td><td class="meaning hidden-meaning2">বেয়াদব</td> </tr>
+                    <tr><td>পরের উন্নতি দেখে কাতর যে</td><td class="meaning hidden-meaning2">পরশ্রীকাতর</td> </tr>
+                    <tr><td>আবেগজনিত কণ্ঠস্বর</td><td class="meaning hidden-meaning2">গদগদ</td> </tr>
+                    <tr><td>পটে আঁকে যে</td><td class="meaning hidden-meaning2">পটুয়া</td> </tr>
+                    <tr><td>আগে যা চিন্তা করা হয়নি</td><td class="meaning hidden-meaning2">অচিন্তিতপূর্ব</td> </tr>
+                    <tr><td>পরকে প্রতিপালন করে যে</td><td class="meaning hidden-meaning2">পরভৃত</td> </tr>
+                    <tr><td>আনন্দ নেই যার</td><td class="meaning hidden-meaning2">নিরানন্দ</td> </tr>
+                    <tr><td>ঈশ্বরে বিশ্বাস আছে যার</td><td class="meaning hidden-meaning2">আস্তিক</td> </tr>
+                    <tr><td>আপনাকে যে পন্ডিত মনে করে</td><td class="meaning hidden-meaning2">পন্ডিতম্মন্য</td> </tr>
+                    <tr><td>ঈশ্বরের ভাব</td><td class="meaning hidden-meaning2">ঈশ্বর্য</td> </tr>
+                    <tr><td>আপনাকে কেন্দ্র করে যার চিন্তা</td><td class="meaning hidden-meaning2">আত্মকেন্দ্রিক</td> </tr>
+                    <tr><td>ঈষৎ আমিষ গন্ধ যার</td><td class="meaning hidden-meaning2">আঁষটে</td> </tr>
+                    <tr><td>আপনাকে পন্ডিত মনে করে যে</td><td class="meaning hidden-meaning2">পন্ডিতম্মন্য</td> </tr>
+                    <tr><td>ঈষৎ পাণ্ডুবর্ণ</td><td class="meaning hidden-meaning2">ধূসর</td> </tr>
+                    <tr><td>যে ভূমিতে ফসল জন্মায় না</td><td class="meaning hidden-meaning2">উষর</td> </tr>
+                    <tr><td>পূর্বে শোনা যায়নি</td><td class="meaning hidden-meaning2">অশ্রুতপূর্ব</td> </tr>
+                    <tr><td>আপনাকে ভুলে থাকে যে</td><td class="meaning hidden-meaning2">আত্মভোলা</td> </tr>
+                    <tr><td>ঈষৎ উষ্ণ যাহা</td><td class="meaning hidden-meaning2">ঈষদুষ্ণ</td> </tr>
+                    <tr><td>ধারা ধরে যা চলে</td><td class="meaning hidden-meaning2">ধারাবাহিক</td> </tr>
+                    <tr><td>ঈষৎ রক্তবর্ণ</td><td class="meaning hidden-meaning2">আরক্ত</td> </tr>
+                    <tr><td>আল্লাহর উপর যার বিশ্বাস নেই</td><td class="meaning hidden-meaning2">নাস্তিক</td> </tr>
+                    <tr><td>প্রথমন্ত্রী বর্তমান থাকা অবস্থায় পুনর্বার বিবাহিত</td><td class="meaning hidden-meaning2">অধিবেত্তা</td> </tr>
+                    <tr><td>আকাশে উড়ে বেড়ায়</td><td class="meaning hidden-meaning2">খেচর</td> </tr>
+                    <tr><td>প্রবেশ করার ইচ্ছা</td><td class="meaning hidden-meaning2">বিবিক্ষা</td> </tr>
+                    <tr><td>আগমনের কোনো তিথি নেই যার</td><td class="meaning hidden-meaning2">অতিথি</td> </tr>
+                    <tr><td>প্রশংসার যোগ্য</td><td class="meaning hidden-meaning2">প্রশংসনীয়</td> </tr>
+                    <tr><td>আহারে সংযম যার</td><td class="meaning hidden-meaning2">মিতাহারী</td> </tr>
+                    <tr><td>প্রকাশিত হবে এমন</td><td class="meaning hidden-meaning2">প্রকাশ্য</td> </tr>
+                    <tr><td>আচারে নিষ্ঠা আছে যার</td><td class="meaning hidden-meaning2">আচারনিষ্ঠ</td> </tr>
+                    <tr><td>প্রাক্কালে ছিল যা</td><td class="meaning hidden-meaning2">প্রাক্তন</td> </tr>
+                    <tr><td>আয় বুঝে ব্যয় করা</td><td class="meaning hidden-meaning2">মিতব্যয়ী</td> </tr>
+                    <tr><td>প্রায় মৃত</td><td class="meaning hidden-meaning2">মুমূর্ষু</td> </tr>
+                    </tbody>
+
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>আয়ুর পক্ষে হিতকর</td><td class="meaning hidden-meaning2">আয়ুষ্য</td> </tr>
+                        <tr><td>পট আঁকে যে</td><td class="meaning hidden-meaning2">পটুয়া</td> </tr>
+                        <tr><td>আদি থেকে অন্ত পর্যন্ত</td><td class="meaning hidden-meaning2">আদ্যন্ত/আদ্যোপান্ত</td> </tr>
+                        <tr><td>পাঁচ রকম বন্ধু বা বিষয়ের মিশেল</td><td class="meaning hidden-meaning2">পাঁচফোড়ন</td> </tr>
+                        <tr><td>আমিষের অভাব</td><td class="meaning hidden-meaning2">নিরামিষ</td> </tr>
+                        <tr><td>পা থেকে মাথা পর্যন্ত</td><td class="meaning hidden-meaning2">পাদমস্তক</td> </tr>
+                        <tr><td>আত্মগোপনের উদ্দেশ্যে পরিধেয় ছদ্মবেশ</td><td class="meaning hidden-meaning2">আধ্যাত্মিক</td> </tr>
+                        <tr><td>পাদিয়ে যে চলে না</td><td class="meaning hidden-meaning2">পন্নগ (সাপ)</td> </tr>
+                        <tr><td>আত্মার সম্বন্ধীয়</td><td class="meaning hidden-meaning2">আত্মীয়</td> </tr>
+                        <tr><td>পান করার যোগ্য</td><td class="meaning hidden-meaning2">পেয়</td> </tr>
+                        <tr><td>অক্ষির অগোচরে</td><td class="meaning hidden-meaning2">পরোক্ষ</td> </tr>
+                        <tr><td>পাঠ করার অযোগ্য</td><td class="meaning hidden-meaning2">অপাঠ্য</td> </tr>
+                        <tr><td>অক্ষির সম্মুখে</td><td class="meaning hidden-meaning2">চাক্ষুষ</td> </tr>
+                        <tr><td>পানি পান করার ইচ্ছা</td><td class="meaning hidden-meaning2">পিপাসা</td> </tr>
+                        <tr><td>অক্ষির সমীপে</td><td class="meaning hidden-meaning2">সমক্ষ</td> </tr>
+                        <tr><td>পাখির ডাক</td><td class="meaning hidden-meaning2">কূজন</td> </tr>
+                        <tr><td>অক্ষি সমক্ষে বর্তমান</td><td class="meaning hidden-meaning2">প্রত্যক্ষ</td> </tr>
+                        <tr><td>পরিণাম চিন্তা করে যে কাজ করে</td><td class="meaning hidden-meaning2">পরিণামদর্শী</td> </tr>
+                        <tr><td>অতি উচ্চ রোল</td><td class="meaning hidden-meaning2">উতরোল</td> </tr>
+                        <tr><td>পতি পুত্রহীনা নারী</td><td class="meaning hidden-meaning2">অবীরা</td> </tr>
+                        <tr><td>অতি কর্মনিপুণ ব্যক্তি</td><td class="meaning hidden-meaning2">কৃতকর্মা</td> </tr>
+                        <tr><td>পল্লীর সাথে বর্তমান</td><td class="meaning hidden-meaning2">সপল্লীক</td> </tr>
+                        <tr><td>বুদ্ধিশক্তির অধিকারী</td><td class="meaning hidden-meaning2">ধীমান</td> </tr>
+                        <tr><td>উদরই সব যার</td><td class="meaning hidden-meaning2">উদরসর্বস্ব</td> </tr>
+                        <tr><td>অণু বিষয়ক</td><td class="meaning hidden-meaning2">আণবিক</td> </tr>
+                        <tr><td>উপকার করার ইচ্ছা</td><td class="meaning hidden-meaning2">উপচিকীর্ষা</td> </tr>
+                        <tr><td>অতর্কিত অবস্থায় আক্রমণকারী</td><td class="meaning hidden-meaning2">আততায়ী</td> </tr>
+                        <tr><td>উপকারীর অপকার করে যে</td><td class="meaning hidden-meaning2">কৃতঘ্ন</td> </tr>
+                        <tr><td>অতীত, বর্তমান ও ভবিষ্যৎ যিনি জানতে পারেন</td><td class="meaning hidden-meaning2">ত্রিকালদর্শী</td> </tr>
+                        <tr><td>উপকারীর উপকার স্বীকার করে না যে</td><td class="meaning hidden-meaning2">অকৃতজ্ঞ</td> </tr>
+                        <tr><td>নদী মেঘলা যে দেশের</td><td class="meaning hidden-meaning2">নদীমেখলা</td> </tr>
+                        <tr><td>একই কালে বর্তমান</td><td class="meaning hidden-meaning2">সমকালীন</td> </tr>
+                        <tr><td>উপকারীর উপকার যে স্বীকার করে</td><td class="meaning hidden-meaning2">কৃতজ্ঞ</td> </tr>
+                        <tr><td>যা নিবারণ করা কষ্টকর</td><td class="meaning hidden-meaning2">দুর্নিবার</td> </tr>
+                        <tr><td>উপস্থিত আছে যা</td><td class="meaning hidden-meaning2">বর্তমান</td> </tr>
+                        <tr><td>মানের দিক থেকে উত্তীর্ণ</td><td class="meaning hidden-meaning2">মানোত্তীর্ণ</td> </tr>
+                        <tr><td>উপস্থিত বুদ্ধি আছে যার</td><td class="meaning hidden-meaning2">প্রত্যুৎপন্নমতি</td> </tr>
+                        <tr><td>মুক্তি পেতে ইচ্ছুক</td><td class="meaning hidden-meaning2">মুমুক্ষু</td> </tr>
+                        <tr><td>একই সময়ে</td><td class="meaning hidden-meaning2">যুগপৎ</td> </tr>
+                        <tr><td>একশত পঞ্চাশ বছর</td><td class="meaning hidden-meaning2">সার্ধশতবর্ষ</td> </tr>
+                        <tr><td>উর্বর নয় যা</td><td class="meaning hidden-meaning2">অনুর্বর</td> </tr>
+                        <tr><td>এখনও আসে নাই যে</td><td class="meaning hidden-meaning2">অনাগত</td> </tr>
+                        <tr><td>উর্বর নয় যা</td><td class="meaning hidden-meaning2">উষর</td> </tr>
+                        <tr><td>মহান আশয় যার</td><td class="meaning hidden-meaning2">মহাশয়</td> </tr>
+                        <tr><td>উত্তর দিক সম্পর্কিত</td><td class="meaning hidden-meaning2">উদীচ্য</td> </tr>
+                        <tr><td>মাথা পেতে লওয়ার যোগ্য</td><td class="meaning hidden-meaning2">শিরোধার্য</td> </tr>
+                        <tr><td>ফল পাকিলে যে গাছ মরিয়া যায়</td><td class="meaning hidden-meaning2">ওষধি</td> </tr>
+                        <tr><td>মুক্তির জন্য যুদ্ধ করে যে</td><td class="meaning hidden-meaning2">মুক্তিযোদ্ধা</td> </tr>
+                        <tr><td>উড়ন্ত পাখির ঝাঁক</td><td class="meaning hidden-meaning2">বলাকা</td> </tr>
+                        <tr><td>যা দীপ্তি পাচ্ছে</td><td class="meaning hidden-meaning2">দেদীপ্যমান</td> </tr>
+                        <tr><td>উজানের কই</td><td class="meaning hidden-meaning2">সহজলভ্য</td> </tr>
+                        <tr><td>যা চেটে খেতে হয়/যা চেটে খাবার যোগ্য</td><td class="meaning hidden-meaning2">লেহ্য</td> </tr>
+                        <tr><td>ফুল হতে তৈরি</td><td class="meaning hidden-meaning2">ফুলেল</td> </tr>
+                        <tr><td>যা অতি দীর্ঘ নয়</td><td class="meaning hidden-meaning2">অতিদীর্ঘ</td> </tr>
+                        <tr><td>ব্যঞ্জনধ্বনির সংক্ষিপ্ত রূপ</td><td class="meaning hidden-meaning2">ফলা</td> </tr>
+                        <tr><td>যা অতিক্রম করা যায় না</td><td class="meaning hidden-meaning2">অনতিক্রম্য</td> </tr>
+                        <tr><td>ব্যবসার দ্রব্যাদি</td><td class="meaning hidden-meaning2">বেসাতি</td> </tr>
+                        <tr><td>যা পূর্বে দেখা যায়নি</td><td class="meaning hidden-meaning2">অদৃষ্টপূর্ব</td> </tr>
+                        <tr><td>ব্যয় করতে কুষ্ঠাবোধ করেন যিনি</td><td class="meaning hidden-meaning2">কৃপণ</td> </tr>
+                        <tr><td>যা পূর্বে দেখা যায়নি এমন</td><td class="meaning hidden-meaning2">অদৃষ্টপূর্ব</td> </tr>
+                        <tr><td>ব্যাঙের ছানা</td><td class="meaning hidden-meaning2">ব্যাঙাচি</td> </tr>
+                        <tr><td>যা পূর্বে শোনা যায়নি</td><td class="meaning hidden-meaning2">অশ্রুতপূর্ব</td> </tr>
+                        <tr><td>ব্যাকরণে পন্ডিত যিনি</td><td class="meaning hidden-meaning2">বৈয়াকরণ</td> </tr>
+                        <tr><td>যা পূর্বে চিন্তা করা যায়নি</td><td class="meaning hidden-meaning2">অচিন্তিতপূর্ব</td> </tr>
+                        <tr><td>ব্যক্তি সম্পর্কিত নয় এমন</td><td class="meaning hidden-meaning2">বস্তুগত</td> </tr>
+                        <tr><td>যা পূর্বে ছিল এখন নেই</td><td class="meaning hidden-meaning2">ভূতপূর্ব</td> </tr>
+                        <tr><td>বনক্রুভাবে গমন করে যে</td><td class="meaning hidden-meaning2">ভুজঙ্গ</td> </tr>
+                        <tr><td>যা প্রমাণ করা যায় না</td><td class="meaning hidden-meaning2">অপ্রমেয়</td> </tr>
+                        <tr><td>বনে বাস করে যে</td><td class="meaning hidden-meaning2">বনবাসী</td> </tr>
+                        <tr><td>যা প্রকাশ করা হয়নি</td><td class="meaning hidden-meaning2">অব্যক্ত</td> </tr>
+                        <tr><td>বর্ষের শেষে আয়ব্যয়ের প্রতিবেদন</td><td class="meaning hidden-meaning2">সালতামামি</td> </tr>
+                        <tr><td>যা প্রতিরোধ করা যায় না</td><td class="meaning hidden-meaning2">অপ্রতিরোধ্য</td> </tr>
+                        <tr><td>উর্ধ্ববাহু যার</td><td class="meaning hidden-meaning2">উদ্বাহ</td> </tr>
+                        <tr><td>যা পানের অযোগ্য</td><td class="meaning hidden-meaning2">অপেয়</td> </tr>
+                        <tr><td>বড় ভাই থাকতে ছোট ভাইয়ের বিয়ে</td><td class="meaning hidden-meaning2">পরিবেদন</td> </tr>
+                        <tr><td>যা পাওয়া কষ্টকর</td><td class="meaning hidden-meaning2">কষ্টসাধ্য</td> </tr>
+                        <tr><td>বয়সের তুল্য</td><td class="meaning hidden-meaning2">বয়স্য</td> </tr>
+                        <tr><td>যা উচ্চারণ করতে কষ্ট হয়</td><td class="meaning hidden-meaning2">অনুচ্চার্য</td> </tr>
+                        <tr><td>বহু গৃহ থেকে ভিক্ষা সংগ্রহ করে যে</td><td class="meaning hidden-meaning2">মাধুকরী</td> </tr>
+                        <tr><td>যা উদিত হয়েছে/উদিত হয়েছে যা</td><td class="meaning hidden-meaning2">উদীয়মান</td> </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>বহু ঘর হতে ভিক্ষা সংগ্রাহক</td><td class="meaning hidden-meaning2">মাধুকর</td> </tr>
+                        <tr><td>যা বপন করা হইয়াছে</td><td class="meaning hidden-meaning2">উত্ত</td> </tr>
+                        <tr><td>বহুর মধ্যে প্রধান</td><td class="meaning hidden-meaning2">শ্রেষ্ঠ</td> </tr>
+                        <tr><td>যা বলা হবে</td><td class="meaning hidden-meaning2">বক্তব্য</td> </tr>
+                        <tr><td>বাঘের চামড়া</td><td class="meaning hidden-meaning2">কৃপ্তি</td> </tr>
+                        <tr><td>যা বলা হয়েছে</td><td class="meaning hidden-meaning2">উক্ত</td> </tr>
+                        <tr><td>বাক্য হারা হয়েছে যিনি</td><td class="meaning hidden-meaning2">মহতবাক</td> </tr>
+                        <tr><td>যা বলা হয় নি</td><td class="meaning hidden-meaning2">অনুক্ত</td> </tr>
+                        <tr><td>যা বাক্যে প্রকাশ করা যায় না</td><td class="meaning hidden-meaning2">অনিবচনীয়</td> </tr>
+                        <tr><td>যা বলার যোগ্য নয়</td><td class="meaning hidden-meaning2">অকথ্য</td> </tr>
+                        <tr><td>বাক্য ও মনের অগোচর</td><td class="meaning hidden-meaning2">অবাঙমানসগোচর</td> </tr>
+                        <tr><td>যা বাস্তু থেকে উৎখাত হয়েছে/বাস্তুহারা হয়েছে যে</td><td class="meaning hidden-meaning2">উদ্বাস্তু</td> </tr>
+                        <tr><td>বান্ধবের সাথে বর্তমান</td><td class="meaning hidden-meaning2">সবান্ধব</td> </tr>
+                        <tr><td>যাবার বার দুলছে</td><td class="meaning hidden-meaning2">দোদুল্যমান</td> </tr>
+                        <tr><td>বাহুতে ভর দিয়ে চলে যে</td><td class="meaning hidden-meaning2">ভুজঙ্গ</td> </tr>
+                        <tr><td>যা বালকের মধ্যেই সুলভ</td><td class="meaning hidden-meaning2">বাল্যসুলভ</td> </tr>
+                        <tr><td>বাতাসে চরে যে</td><td class="meaning hidden-meaning2">কপোত</td> </tr>
+                        <tr><td>যা ভাগ করা হয়েছে</td><td class="meaning hidden-meaning2">বিভক্ত</td> </tr>
+                        <tr><td>বীরের উর্ণা ধ্বনি</td><td class="meaning hidden-meaning2">হুঙ্কার</td> </tr>
+                        <tr><td>যা মর্মকে স্পর্শ করে</td><td class="meaning hidden-meaning2">মর্মস্পর্শী</td> </tr>
+                        <tr><td>নাভিতে যার</td><td class="meaning hidden-meaning2">উর্ণনাভ</td> </tr>
+                        <tr><td>যা লঙ্ঘন করা দুরূহ</td><td class="meaning hidden-meaning2">দুর্লঙ্ঘনীয়</td> </tr>
+                        <tr><td>ভূল্কেন্দ্রের দিকে বস্তুর টান</td><td class="meaning hidden-meaning2">অভিকর্ষ</td> </tr>
+                        <tr><td>কষ্টে লাভ করা যায়</td><td class="meaning hidden-meaning2">দুর্লভ</td> </tr>
+                        <tr><td>বল ভাতের অভাব</td><td class="meaning hidden-meaning2">অভাবাত্ত</td> </tr>
+                        <tr><td>যা লাফিয়ে চলে</td><td class="meaning hidden-meaning2">প্লবগ</td> </tr>
+                        <tr><td>ভবিষ্যৎ চিন্তা করে কাজ করে যে</td><td class="meaning hidden-meaning2">দূরদর্শী</td> </tr>
+                        <tr><td>যা কথায় বর্ণনা করা যায় না</td><td class="meaning hidden-meaning2">অবর্ণনীয়</td> </tr>
+                        <tr><td>খষির দ্বারা উক্ত আর্য খণ দেয় যে</td><td class="meaning hidden-meaning2">উত্তমর্ণ</td> </tr>
+                        <tr><td>যা ক্ষেত্রে জয় করা যায়</td><td class="meaning hidden-meaning2">দুর্জয়</td> </tr>
+                        <tr><td>মৃত্তিকা দ্বারা নির্মিত</td><td class="meaning hidden-meaning2">মৃন্ময়</td> </tr>
+                        <tr><td>জয় সূচক উৎসব</td><td class="meaning hidden-meaning2">জয়ন্তী</td> </tr>
+                        <tr><td>একের পরিবর্তে আরেক</td><td class="meaning hidden-meaning2">বিকল্প</td> </tr>
+                        <tr><td>যা কখনো নষ্ট হয় না</td><td class="meaning hidden-meaning2">অবিনশ্বর</td> </tr>
+                        <tr><td>মধুপান করে যে</td><td class="meaning hidden-meaning2">মধুপ</td> </tr>
+                        <tr><td>যা কাঁপছে</td><td class="meaning hidden-meaning2">কম্পমান</td> </tr>
+                        <tr><td>এই মাত্র জন্ম যার</td><td class="meaning hidden-meaning2">সদ্যোজাত</td> </tr>
+                        <tr><td>যা স্পর্শ করা যায় না</td><td class="meaning hidden-meaning2">অস্পর্শাতীত</td> </tr>
+                        <tr><td>মন হরণ করে যা</td><td class="meaning hidden-meaning2">মনোহর</td> </tr>
+                        <tr><td>যা ক্রমশ দূর হয়ে যাচ্ছে</td><td class="meaning hidden-meaning2">অপসৃয়মাণ</td> </tr>
+                        <tr><td>মরমর হয়েছে যে</td><td class="meaning hidden-meaning2">সম্মুমূর্ষু</td> </tr>
+                        <tr><td>রাত্রির শেষভাগ</td><td class="meaning hidden-meaning2">পররাত্র</td> </tr>
+                        <tr><td>এক জন্ম থেকে অন্য জন্ম</td><td class="meaning hidden-meaning2">জন্মজন্মান্তর</td> </tr>
+                        <tr><td>রাত্রিকালীন যুদ্ধ</td><td class="meaning hidden-meaning2">সৌপ্তিক</td> </tr>
+                        <tr><td>এক বিষয়ে যার চিত্ত নিবিষ্ট</td><td class="meaning hidden-meaning2">একাগ্রচিত্ত</td> </tr>
+                        <tr><td>ত্রাণ লাভ করিবার ইচ্ছা</td><td class="meaning hidden-meaning2">তিতীর্ষা</td> </tr>
+                        <tr><td>একই অর্থের শব্দ</td><td class="meaning hidden-meaning2">প্রতিশব্দ</td> </tr>
+                        <tr><td>রীতিতে অভিক্রম না করে</td><td class="meaning hidden-meaning2">যথারীতি</td> </tr>
+                        <tr><td>একই মায়ের সন্তান</td><td class="meaning hidden-meaning2">সহোদর</td> </tr>
+                        <tr><td>কূলের সমীপে</td><td class="meaning hidden-meaning2">উপকূল</td> </tr>
+                        <tr><td>যা ক্রমশ বৃদ্ধি পাচ্ছে</td><td class="meaning hidden-meaning2">ক্রমবর্ধমান</td> </tr>
+                        <tr><td>কৃষি থেকে উৎপন্ন</td><td class="meaning hidden-meaning2">কৃষিজ</td> </tr>
+                        <tr><td>যা ক্রমশ বর্ধিত হচ্ছে</td><td class="meaning hidden-meaning2">বর্ধিষ্ণু</td> </tr>
+                        <tr><td>কণ্ঠের সমীপে</td><td class="meaning hidden-meaning2">উপকণ্ঠ</td> </tr>
+                        <tr><td>যা ক্রমশ বিস্তীর্ণ হচ্ছে</td><td class="meaning hidden-meaning2">ক্রমবিস্তার্যমান</td> </tr>
+                        <tr><td>কন্যার পুত্র</td><td class="meaning hidden-meaning2">দৌহিত্র</td> </tr>
+                        <tr><td>যা দেখা যায় না</td><td class="meaning hidden-meaning2">অদৃশ্য</td> </tr>
+                        <tr><td>কম কথা বলে যে</td><td class="meaning hidden-meaning2">মিতভাষী</td> </tr>
+                        <tr><td>যা পৌতা হয়েছে</td><td class="meaning hidden-meaning2">প্রোথিত</td> </tr>
+                        <tr><td>কর্ম সম্পাদনে পরিশ্রমী</td><td class="meaning hidden-meaning2">কর্মঠ</td> </tr>
+                        <tr><td>যা খাওয়ার যোগ্য</td><td class="meaning hidden-meaning2">খাদ্য</td> </tr>
+                        <tr><td>কর দিতে হয় না যে জমির</td><td class="meaning hidden-meaning2">নিষ্কর</td> </tr>
+                        <tr><td>যা সহজে অতিক্রম করা যায় না</td><td class="meaning hidden-meaning2">দুরতিক্রম</td> </tr>
+                        <tr><td>শত্রুকে/অরিকে হত্যা/বধ করে যে</td><td class="meaning hidden-meaning2">শত্রুঘ্ন</td> </tr>
+                        <tr><td>যা সহজে পরিপাক হয় না</td><td class="meaning hidden-meaning2">দুর্পাচ্য</td> </tr>
+                        <tr><td>শত্রুকে জয় করে যে</td><td class="meaning hidden-meaning2">শত্রুজিৎ/শত্রুঞ্জয়</td> </tr>
+                        <tr><td>যা সহজে মরে না</td><td class="meaning hidden-meaning2">দুর্মর</td> </tr>
+                        <tr><td>কখনো মৃত্যু হয় না যার</td><td class="meaning hidden-meaning2">অমর</td> </tr>
+                        <tr><td>যা সহজে লাভ করা যায়</td><td class="meaning hidden-meaning2">সুলভ</td> </tr>
+                        <tr><td>কখনও চিন্তা করা যায় না</td><td class="meaning hidden-meaning2">অচিন্ত্য/অচিন্তনীয়</td> </tr>
+                        <tr><td>যা সহজে জয় করা যায় না</td><td class="meaning hidden-meaning2">অজেয়</td> </tr>
+                        <tr><td>শহরের উপকণ্ঠ</td><td class="meaning hidden-meaning2">উপশহর</td> </tr>
+                        <tr><td>যা সহজে জানা যায় না</td><td class="meaning hidden-meaning2">দুর্জ্ঞেয়</td> </tr>
+                        <tr><td>কণ্ঠ পর্যন্ত</td><td class="meaning hidden-meaning2">আকণ্ঠ</td> </tr>
+                        <tr><td>যা সহজে জীর্ণ হয়</td><td class="meaning hidden-meaning2">সুপাচ্য</td> </tr>
+                        <tr><td>শ্রদ্ধার যোগ্য</td><td class="meaning hidden-meaning2">শ্রদ্ধেয়</td> </tr>
+                        <tr><td>যা হতে পারে না</td><td class="meaning hidden-meaning2">অসম্ভব</td> </tr>
+                        <tr><td>কাচের তৈরি ঘর</td><td class="meaning hidden-meaning2">শিশমহল</td> </tr>
+                        <tr><td>যা জলে ও স্থলে চরে</td><td class="meaning hidden-meaning2">উভচর</td> </tr>
+                        <tr><td>কাজ শিখছে এমন</td><td class="meaning hidden-meaning2">শিক্ষানবিস</td> </tr>
+                        <tr><td>যা জলে চরে</td><td class="meaning hidden-meaning2">জলচর</td> </tr>
+                        <tr><td>কুবেরের ধন রক্ষক</td><td class="meaning hidden-meaning2">যক্ষ</td> </tr>
+                        <tr><td>কুমারীর পুত্র</td><td class="meaning hidden-meaning2">কানীন</td> </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                        <th>এক কথায় প্রকাশ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>যা জয় করা যায় না</td><td class="meaning hidden-meaning2">অজয়</td> </tr>
+                        <tr><td>খাওয়ার ইচ্ছা</td><td class="meaning hidden-meaning2">ক্ষুধা</td> </tr>
+                        <tr><td>যা নিঃশেষে পান করা হয়েছে</td><td class="meaning hidden-meaning2">নিপীত</td> </tr>
+                        <tr><td>যা বিনা যত্নে লাভ করা গিয়েছে</td><td class="meaning hidden-meaning2">অযত্নলব্ধ</td> </tr>
+                        <tr><td>যা তর্কের দ্বারা মীমাংসা করা যায় না</td><td class="meaning hidden-meaning2">অপ্রতর্ক</td> </tr>
+                        <tr><td>যাকে দমন করা যায় না</td><td class="meaning hidden-meaning2">অদম্য</td> </tr>
+                        <tr><td>যাকে অকালে জাগরণ করা হয়</td><td class="meaning hidden-meaning2">অকালবোধন</td> </tr>
+                        <tr><td>যাকে শাসন করা দুঃসাধ্য</td><td class="meaning hidden-meaning2">দুঃশাসন</td> </tr>
+                        <tr><td>যার স্ত্রী মারা গেছেন</td><td class="meaning hidden-meaning2">বিধবা</td> </tr>
+                        <tr><td>যার কোনো উপায় নেই</td><td class="meaning hidden-meaning2">নিরুপায়</td> </tr>
+                        <tr><td>যার কোনো কিছু চাওয়ার নেই</td><td class="meaning hidden-meaning2">অকিঞ্চন</td> </tr>
+                        <tr><td>যার চোখে লজ্জা নেই</td><td class="meaning hidden-meaning2">চক্ষুঃশ্মশ্রু</td> </tr>
+                        <tr><td>যার জ্যোতি বেশিক্ষণ স্থায়ী হয় না</td><td class="meaning hidden-meaning2">ক্ষণপ্রভা</td> </tr>
+                        <tr><td>যার অনুরাগ দূর হয়েছে</td><td class="meaning hidden-meaning2">বীতরাগ</td> </tr>
+                        <tr><td>যার প্রকৃত বর্ণ ধরা যায় না</td><td class="meaning hidden-meaning2">বর্ণচোরা</td> </tr>
+                        <tr><td>যার মূল্য নির্ধারণ করা যায় না</td><td class="meaning hidden-meaning2">অমূল্য</td> </tr>
+                        <tr><td>যার সর্বস্ব চুরি হয়ে গেছে</td><td class="meaning hidden-meaning2">হৃতসর্বস্ব</td> </tr>
+                        <tr><td>যার কিছু নেই</td><td class="meaning hidden-meaning2">নিঃস্ব</td> </tr>
+                        <tr><td>যার তুলনা নেই</td><td class="meaning hidden-meaning2">অতুলনীয়</td> </tr>
+                        <tr><td>যারা এক মাতার গর্ভে জন্মেছে</td><td class="meaning hidden-meaning2">সহোদর</td> </tr>
+                        <tr><td>যাহা দেখা যায়</td><td class="meaning hidden-meaning2">চক্ষুগোচর</td> </tr>
+                        <tr><td>যাহার বুদ্ধি পরিপক্ক হয় নাই</td><td class="meaning hidden-meaning2">অপরিপক্ক</td> </tr>
+                        <tr><td>ঐতিহাসিক কালের পূর্ববর্তী</td><td class="meaning hidden-meaning2">প্রাগৈতিহাসিক</td> </tr>
+                        <tr><td>যুদ্ধ থেকে যে বীর পালায় না</td><td class="meaning hidden-meaning2">সংশপ্তক</td> </tr>
+                        <tr><td>যুদ্ধে স্থির থাকেন যিনি</td><td class="meaning hidden-meaning2">যুধিষ্ঠির</td> </tr>
+                        <tr><td>রক্ত দিয়ে রাঙানো হয়েছে এমন</td><td class="meaning hidden-meaning2">রক্তরঞ্জিত</td> </tr>
+                        <tr><td>শুভ ক্ষণে জন্ম যার</td><td class="meaning hidden-meaning2">ক্ষণজন্মা</td> </tr>
+                        <tr><td>শুকনো পাতার শব্দ</td><td class="meaning hidden-meaning2">মর্মর</td> </tr>
+                        <tr><td>ওজন পরিমাপক</td><td class="meaning hidden-meaning2">তুলাদণ্ড</td> </tr>
+                        <tr><td>রাত্রি ও দিবসের সন্ধিক্ষণ</td><td class="meaning hidden-meaning2">গোধূলি</td> </tr>
+                        <tr><td>হাতির ডাক</td><td class="meaning hidden-meaning2">বৃংহতি</td> </tr>
+                        <tr><td>হরিণের চর্ম</td><td class="meaning hidden-meaning2">অজিন</td> </tr>
+                        <tr><td>দ্বীপে জন্ম হয়েছে যার</td><td class="meaning hidden-meaning2">দ্বৈপায়ন</td> </tr>
+                        <tr><td>চক্ষুর সম্মুখে সংঘটিত</td><td class="meaning hidden-meaning2">চাক্ষুষ</td> </tr>
+                        <tr><td>ছন্দে নিপুণ যিনি</td><td class="meaning hidden-meaning2">ছান্দসিক</td> </tr>
+                        <tr><td>ছয় মাস অন্তর</td><td class="meaning hidden-meaning2">ষাণ্মাসিক</td> </tr>
+                        <tr><td>জ্বলজ্বল করছে যা</td><td class="meaning hidden-meaning2">জাজ্বল্যমান</td> </tr>
+                        <tr><td>জয়ের জন্য যে উৎসব</td><td class="meaning hidden-meaning2">জয়োৎসব</td> </tr>
+                        <tr><td>সম্মুখে অগ্রসর হয়ে অভ্যর্থনা</td><td class="meaning hidden-meaning2">প্রত্যুদগমন</td> </tr>
+                        <tr><td>সম্পূর্ণ নতুন</td><td class="meaning hidden-meaning2">অভিনব</td> </tr>
+                        <tr><td>গজের মুখের মত মুখ যার</td><td class="meaning hidden-meaning2">গজানন</td> </tr>
+                        <tr><td>সবার অজ্ঞাতে লুকানো ধন</td><td class="meaning hidden-meaning2">গুপ্তধন</td> </tr>
+                        <tr><td>গভীর জ্ঞান</td><td class="meaning hidden-meaning2">প্রজ্ঞা</td> </tr>
+                        <tr><td>গভীর রাত্রি</td><td class="meaning hidden-meaning2">নিশীথ</td> </tr>
+                        <tr><td>গমন করার ইচ্ছা</td><td class="meaning hidden-meaning2">জিগমিষা</td> </tr>
+                        <tr><td>সমুদ্র থেকে হিমাচল পর্যন্ত</td><td class="meaning hidden-meaning2">অসমুদ্রহিমাচল</td> </tr>
+                        <tr><td>সমুদ্রের ঢেউ</td><td class="meaning hidden-meaning2">উর্মি/কল্লোল</td> </tr>
+                        <tr><td>সকলের কাছে খ্যাতি যার</td><td class="meaning hidden-meaning2">বিখ্যাত</td> </tr>
+                        <tr><td>সকলের জন্য প্রযোজ্য</td><td class="meaning hidden-meaning2">সার্বজনীন</td> </tr>
+                        <tr><td>সকল পদার্থ ভোজন করে যে</td><td class="meaning hidden-meaning2">সর্বভুক</td> </tr>
+                        <tr><td>সহজে যা ভেঙে যায়</td><td class="meaning hidden-meaning2">ভঙ্গুর</td> </tr>
+                        <tr><td>গ্রহণ করার যোগ্য</td><td class="meaning hidden-meaning2">গ্রহণীয়</td> </tr>
+                        <tr><td>পাপের খোলস</td><td class="meaning hidden-meaning2">নির্মোক</td> </tr>
+                        <tr><td>সাক্ষাৎ দ্রষ্টা</td><td class="meaning hidden-meaning2">সাক্ষী</td> </tr>
+                        <tr><td>সীমাবদ্ধ জ্ঞানের অধিকারী</td><td class="meaning hidden-meaning2">কূপমণ্ডুক</td> </tr>
+                        <tr><td>গণনার যোগ্য নয় যা</td><td class="meaning hidden-meaning2">নগণ্য</td> </tr>
+                        <tr><td>ঘরের অভাব</td><td class="meaning hidden-meaning2">হালঘর</td> </tr>
+                        <tr><td>হরেক রকম বলে যে</td><td class="meaning hidden-meaning2">মহরবোলা</td> </tr>
+                        <tr><td>হরণ করিবার ইচ্ছা</td><td class="meaning hidden-meaning2">জিহীর্ষা</td> </tr>
+                        <tr><td>হাতি রাখার স্থান</td><td class="meaning hidden-meaning2">পিলখানা</td> </tr>
+                        <tr><td>হাতির বাসস্থান</td><td class="meaning hidden-meaning2">গজগৃহ</td> </tr>
+                        <tr><td>হাতির শাবক</td><td class="meaning hidden-meaning2">করভ</td> </tr>
+                        <tr><td>কিছুতে ভয় নেই এমন</td><td class="meaning hidden-meaning2">অকুতোভয়</td> </tr>
+                        <tr><td>সিংহের ডাক</td><td class="meaning hidden-meaning2">হুঙ্কার</td> </tr>
+                        <tr><td>হিত করিবার ইচ্ছা</td><td class="meaning hidden-meaning2">হিতৈষা</td> </tr>
+                        <tr><td>হিত চিন্তা করে যে</td><td class="meaning hidden-meaning2">হিতৈষী</td> </tr>
+                        <tr><td>চিরস্থায়ী নয় যা</td><td class="meaning hidden-meaning2">নশ্বর</td> </tr>
+                        <tr><td>চিরকাল ধরে যা জ্বলছে</td><td class="meaning hidden-meaning2">জাজ্বল্যমান</td> </tr>
+                        <tr><td>চিবিয়ে ও চুষে খেতে হয় এমন</td><td class="meaning hidden-meaning2">চর্বাচুষ্য</td> </tr>
+                        <tr><td>ডালিমের কুঁড়ি</td><td class="meaning hidden-meaning2">আনারকলি</td> </tr>
+                        <tr><td>টঢিপির মতো চ্যাপ্টা</td><td class="meaning hidden-meaning2">-</td> </tr>
+                        <tr><td>তিনটি ফলের সমাহার</td><td class="meaning hidden-meaning2">ত্রিফলা</td> </tr>
+                        <tr><td>ক্ষমার যোগ্য</td><td class="meaning hidden-meaning2">ক্ষমার</td> </tr>
+                        <tr><td>ক্ষুদ্র বাগান</td><td class="meaning hidden-meaning2">স্বাগিচা</td> </tr>
+                        <tr><td>তল স্পর্শ করা যায় না যার</td><td class="meaning hidden-meaning2">অতলস্পর্শী</td> </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered table-striped bg-light">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>বাক্যাংশ</th>
+                            <th>এক কথায় প্রকাশ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>জন্মকাল হতে</td><td class="meaning hidden-meaning2">জন্মাবধি</td> </tr>
+                        <tr><td>তর্ক করে যে</td><td class="meaning hidden-meaning2">তার্কিক</td> </tr>
+                        <tr><td>জলপ্রবাহের ধ্বনি</td><td class="meaning hidden-meaning2">ঝলঝলানি/কলকল</td> </tr>
+                        <tr><td>তীর নিক্ষেপে ওস্তাদ</td><td class="meaning hidden-meaning2">তীরন্দাজ</td> </tr>
+                        <tr><td>জানতে ইচ্ছুক/জানার ইচ্ছা</td><td class="meaning hidden-meaning2">জিজ্ঞাসা</td> </tr>
+                        <tr><td>জানা উচিত যা</td><td class="meaning hidden-meaning2">জ্ঞেয়</td> </tr>
+                        <tr><td>যিনি বক্তৃতায় পটু</td><td class="meaning hidden-meaning2">বাগ্মী</td> </tr>
+                        <tr><td>জানা যায় না যা</td><td class="meaning hidden-meaning2">অজ্ঞেয়</td> </tr>
+                        <tr><td>ফল পাকলে যে গাছ মরে যায়</td><td class="meaning hidden-meaning2">ওষধি</td> </tr>
+                        <tr><td>জায়া ও পতি</td><td class="meaning hidden-meaning2">দম্পতি</td> </tr>
+                        <tr><td>কুকুরের ডাক</td><td class="meaning hidden-meaning2">ভুকভুক</td> </tr>
+                        <tr><td>হৃদয়ের প্রীতিকর</td><td class="meaning hidden-meaning2">হৃদয়ঙ্গম</td> </tr>
+                        <tr><td>হনন করার ইচ্ছা</td><td class="meaning hidden-meaning2">জিঘাংসা</td> </tr>
+                        <tr><td>দিনে একবার আহার করে যে</td><td class="meaning hidden-meaning2">একাহারী</td> </tr>
+                        <tr><td>একই গুরুর শিষ্য</td><td class="meaning hidden-meaning2">সতীর্থ</td> </tr>
+                        <tr><td>দিনের শেষ ভাগ</td><td class="meaning hidden-meaning2">অপরাহ্ন</td> </tr>
+                        <tr><td>নদীর ভাঙনে সর্বশান্ত জনগণ</td><td class="meaning hidden-meaning2">নদীসিকস্তি</td> </tr>
+                        <tr><td>দিনের আলো ও রাতের আধার</td><td class="meaning hidden-meaning2">গোধূলী</td> </tr>
+                        <tr><td>বৃষ্টির জল</td><td class="meaning hidden-meaning2">শীকর</td> </tr>
+                        <tr><td>দিনের পূর্বভাগ</td><td class="meaning hidden-meaning2">পূর্বাহ্ন</td> </tr>
+                        <tr><td>অন্তিম কাল উপস্থিত যার</td><td class="meaning hidden-meaning2">মুমূর্ষু</td> </tr>
+                        <tr><td>দিনের মধ্য ভাগ</td><td class="meaning hidden-meaning2">মধ্যাহ্ন</td> </tr>
+                        <tr><td>যা খুব শীতল বা উষ্ণ নয়</td><td class="meaning hidden-meaning2">নাতিশীতোষ্ণ</td> </tr>
+                        <tr><td>দিবসের প্রথম ভাগ</td><td class="meaning hidden-meaning2">পূর্বাহ্ন</td> </tr>
+                        <tr><td>ইহলোক বিষয়ক</td><td class="meaning hidden-meaning2">ইহলৌকিক</td> </tr>
+                        <tr><td>নিন্দা করার অযোগ্য</td><td class="meaning hidden-meaning2">অনিন্দ্য</td> </tr>
+                        <tr><td>যা পূর্বে ছিল এখন নেই</td><td class="meaning hidden-meaning2">ভূতপূর্ব</td> </tr>
+                        <tr><td>নিজেদের পরিচালিত শাসন</td><td class="meaning hidden-meaning2">স্বায়ত্তশাসন</td> </tr>
+                        <tr><td>আমি, তুমি ও সে - আমরা</td><td class="meaning hidden-meaning2">-</td> </tr>
+                        <tr><td>নিজেই পতি নির্বাচন করে যে</td><td class="meaning hidden-meaning2">স্বয়ংবরা</td> </tr>
+                        <tr><td>তুলার তৈরি</td><td class="meaning hidden-meaning2">তুলোট</td> </tr>
+                        <tr><td>নিজকে পন্ডিত মনে করে যে</td><td class="meaning hidden-meaning2">পন্ডিতম্মন্য</td> </tr>
+                        <tr><td>যিনি বিদ্যা লাভ করেছেন</td><td class="meaning hidden-meaning2">কৃতবিদ্য</td> </tr>
+                        <tr><td>প্রিয় কাজ করবার ইচ্ছা</td><td class="meaning hidden-meaning2">প্রিয়চিকীর্ষা</td> </tr>
+                        <tr><td>সমুদ্রের ঢেউয়ের শব্দ</td><td class="meaning hidden-meaning2">কল্লোল</td> </tr>
+                        <tr><td>পিতার ভ্রাতা</td><td class="meaning hidden-meaning2">পিতৃব্য</td> </tr>
+                        <tr><td>শোনা মাত্র মনে রাখতে পারে</td><td class="meaning hidden-meaning2">শ্রুতিধর</td> </tr>
+                        <tr><td>পিতার পিতা</td><td class="meaning hidden-meaning2">পিতামহ</td> </tr>
+                        <tr><td>যে ক্রমাগত রোদন করছে</td><td class="meaning hidden-meaning2">রোরুদ্যমান</td> </tr>
+                        <tr><td>বিদেশে থাকে যে</td><td class="meaning hidden-meaning2">প্রবাসী</td> </tr>
+                        <tr><td>যে মেয়ের বিয়ে হয়নি</td><td class="meaning hidden-meaning2">অনূঢ়া</td> </tr>
+                        <tr><td>বিনা যত্নে উৎপন্ন</td><td class="meaning hidden-meaning2">অযত্নসম্ভূত</td> </tr>
+                        <tr><td>ইন্দ্রিয়কে জয় করেছে যে</td><td class="meaning hidden-meaning2">জিতেন্দ্রিয়</td> </tr>
+                        <tr><td>বিশ্বজনের জন্য হিতকর</td><td class="meaning hidden-meaning2">বিশ্বজনীন</td> </tr>
+                        <tr><td>এইমাত্র জন্মগ্রহণ করেছে যে</td><td class="meaning hidden-meaning2">নবজাতক</td> </tr>
+                        <tr><td>বিহঙ্গের ধ্বনি</td><td class="meaning hidden-meaning2">কূজন</td> </tr>
+                        <tr><td>নৌকা চালনা করে যে</td><td class="meaning hidden-meaning2">মাঝি</td> </tr>
+                        <tr><td>বিচার না করে কাজ করেন যিনি</td><td class="meaning hidden-meaning2">সত্বর</td> </tr>
+                        <tr><td>বরণ করার যোগ্য</td><td class="meaning hidden-meaning2">বরেণ্য</td> </tr>
+                        <tr><td>বিজয় লাভের ইচ্ছা</td><td class="meaning hidden-meaning2">বিজিগীষা</td> </tr>
+                        <tr><td>হনন করার ইচ্ছা</td><td class="meaning hidden-meaning2">জিঘাংসা</td> </tr>
+                        <tr><td>জয় করার ইচ্ছা</td><td class="meaning hidden-meaning2">জিগীষা</td> </tr>
+                        <tr><td>শুভ ক্ষণে জন্ম যার</td><td class="meaning hidden-meaning2">ক্ষণজন্মা</td> </tr>
+                        <tr><td>ময়ূরের ডাক</td><td class="meaning hidden-meaning2">কেকা</td> </tr>
+                        <tr><td>যিনি এসেছেন অথচ অপরিচিত</td><td class="meaning hidden-meaning2">আগন্তুক</td> </tr>
+                        <tr><td>ভিতর থেকে গোপনে ক্ষতিসাধন</td><td class="meaning hidden-meaning2">অন্তর্ঘাত</td> </tr>
+                        <tr><td>যিনি সব জানেন</td><td class="meaning hidden-meaning2">সর্বজ্ঞ</td> </tr>
+                        <tr><td>মিথ্যা ধারণা</td><td class="meaning hidden-meaning2">ভ্রান্তি</td> </tr>
+                        <tr><td>যিনি বিচার করেন</td><td class="meaning hidden-meaning2">বিচারক</td> </tr>
+                        <tr><td>যিনি অনেক দেখেছেন</td><td class="meaning hidden-meaning2">ভূয়োদর্শী</td> </tr>
+                        <tr><td>শিশুর পক্ষে যাহা সম্ভবপর</td><td class="meaning hidden-meaning2">শিশুসুলভ</td> </tr>
+                        <tr><td>যিনি প্রথমে পথ দেখান</td><td class="meaning hidden-meaning2">পথপ্রদর্শক/পথিকৃৎ</td> </tr>
+                        <tr><td>যিনি প্রতিষ্ঠা লাভ করেছেন</td><td class="meaning hidden-meaning2">লব্ধপ্রতিষ্ঠ</td> </tr>
+                        <tr><td>যিনি বক্তব্য দানে পটু</td><td class="meaning hidden-meaning2">বাগ্মী</td> </tr>
+                        <tr><td>ভিক্ষার অভাব</td><td class="meaning hidden-meaning2">দুর্ভিক্ষ</td> </tr>
+                    </tbody>
+                </table>
+
+
+                    
+            </div>
+
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+
+</html>

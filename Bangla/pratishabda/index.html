@@ -12,10 +12,10 @@
     </head>
 
     <body>
-        <h4 class="indexTitle offset-11 col-1"><a href="./index2.html">Full</a></h4>
+        <!-- <h4 class="indexTitle offset-11 col-1"><a href="./index2.html">Full</a></h4> -->
 
         <div class="container mt-5">
-            <h3 class="text-center mb-4">বাংলা এক কথায় প্রকাশ</h3>
+            <h3 class="text-center mb-4">প্রতিশব্দ</h3>
 
             <div class="table-responsive">
                 <button onclick="showNextMeaning()" id="nextBtn" style="margin: 10px; padding: 10px 20px;">Next</button>
@@ -23,49 +23,190 @@
                 <table class="table table-bordered table-striped bg-light">
                     <thead class="table-dark">
                     <tr>
-                        <th>বাক্যাংশ</th>
-                        <th>এক কথায় প্রকাশ</th>
+                        <th>মূল শব্দ</th>
+                        <th>প্রতিশব্দ</th>
                         <th>Your Answer</th>
                     </tr>
                     </thead>
+                   
+
                     <tbody id="phrase-table">
-                        <tr><td>আকাশে উড়ে যে</td><td class="meaning hidden-meaning">খেচর</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>আকাশ ও পৃথিবীর অন্তরাল</td><td class="meaning hidden-meaning">ক্রন্দসী</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যা খুব শীতল বা উষ্ণ নয়</td><td class="meaning hidden-meaning">নাতিশীতোষ্ণ</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>একই গুরুর শিষ্য</td><td class="meaning hidden-meaning">সতীর্থ</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যা ক্রমশ বিস্তীর্ণ হচ্ছে</td><td class="meaning hidden-meaning">ক্রমবিকাশমান</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যার দাড়ি গোঁফ ওঠেনি</td><td class="meaning hidden-meaning">অজাতশ্মশ্রু</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>মরমর হয়েছে যে</td><td class="meaning hidden-meaning">মর্মর</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যিনি প্রথম পথ দেখান</td><td class="meaning hidden-meaning">পথিকৃৎ</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>নুপুরের ধ্বনি</td><td class="meaning hidden-meaning">নূপুরনাদ</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>বাঁদের চামড়া</td><td class="meaning hidden-meaning">চর্ম</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যার সর্বস্ব চুরি হয়ে গেছে</td><td class="meaning hidden-meaning">হৃতসর্বস্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>ভোজন করার ইচ্ছা</td><td class="meaning hidden-meaning">বুভুক্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যা পান করার অযোগ্য</td><td class="meaning hidden-meaning">অপেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>রাত্রিকালীন যুদ্ধ</td><td class="meaning hidden-meaning">নিশীথযুদ্ধ</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>দিনের মধ্যভাগ</td><td class="meaning hidden-meaning">মধ্যাহ্ন</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>কোকিলের ডাক</td><td class="meaning hidden-meaning">কুহু</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>দান করার ইচ্ছা</td><td class="meaning hidden-meaning">দীক্ষা</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>শুকনো পাতার শব্দ</td><td class="meaning hidden-meaning">মর্মর</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>ময়ূরের ডাক</td><td class="meaning hidden-meaning">কেকা</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যা অভিক্রম করা যায় না</td><td class="meaning hidden-meaning">অনভিক্রম্য</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যা পূর্বে শোনা যায়নি</td><td class="meaning hidden-meaning">অশ্রুতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>হনন করিবার ইচ্ছা</td><td class="meaning hidden-meaning">জিঘাংসা</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>দমন করা যায় না যা</td><td class="meaning hidden-meaning">অদম্য</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>দমন করা কষ্টকর যাকে</td><td class="meaning hidden-meaning">দুর্দমনীয়</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>যার অন্য কোন উপায় নেই</td><td class="meaning hidden-meaning">অনন্যোপায়</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>অন্তিমকাল উপস্থিত যার</td><td class="meaning hidden-meaning">মুমূর্ষু</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>দান করার যোগ্য</td><td class="meaning hidden-meaning">দেয়/দাতব্য</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>অল্প কথা বলে যে</td><td class="meaning hidden-meaning">মিতভাষী</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>আপনাকে যে ভুলে থাকে</td><td class="meaning hidden-meaning">আত্মভোলা</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>আকাশে চড়ে যে</td><td class="meaning hidden-meaning">আকাশচারী/খেচর</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>বলা হয়েছে যা</td><td class="meaning hidden-meaning">উক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>পূর্বে যা ঘটেনি</td><td class="meaning hidden-meaning">অভূতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>একবার ফল দিয়ে যে গাছ মরে যায়</td><td class="meaning hidden-meaning">ওষধি</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>দুই নদীর মধ্যবতী স্থান</td><td class="meaning hidden-meaning">দোয়াব</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>দুইবার জন্মে যে</td><td class="meaning hidden-meaning">দ্বিজ</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>দুবার ফসল হয় যে জমিতে</td><td class="meaning hidden-meaning">দোফসলি</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>স্থায়ী ঠিকানা নেই যার</td><td class="meaning hidden-meaning">উদ্বাস্ত</td><td><input type="text" class="form-control user-input" /></td></tr>
+                       
+                        <tr><td>আল্লাহ</td><td class="meaning hidden-meaning">রব, সৃষ্টিকর্তা, ঈশ্বর, খোদা, পরমেশ্বর, জগদীশ্বর, প্রভু, বিধাতা, বিভু, স্রষ্টা, ভগবান</td></tr>
+                        <tr><td>পৃথিবী</td><td class="meaning hidden-meaning">ভূ, বিশ্ব,জগৎ, ভুবন, বসুধা, বসুন্ধরা, ধরা, ধরিত্রী, ধরণী, দুনিয়া, মহী, ক্ষিতি</td></tr>
+                        <tr><td>সূর্য</td><td class="meaning hidden-meaning">রবি, মর্তন্ড, দিবাকর, আদিত্য, ভানু, ভাস্কর, তপন, সবিতা</td></tr>
+                        <tr><td>আঁধার</td><td class="meaning hidden-meaning">অন্ধকার, তিমির, তমসা, তমঃ</td></tr>
+                        <tr><td>পর্বত</td><td class="meaning hidden-meaning">গিরি, পাহাড়, শৈলচূড়া,</td></tr>
+                        <tr><td>পাখি</td><td class="meaning hidden-meaning">গেজ, পক্ষি, </td></tr>
+                        <tr><td>খবর</td><td class="meaning hidden-meaning">সংবাদ, সন্দেশ, বার্তা</td></tr>
+                        <tr><td>হাত</td><td class="meaning hidden-meaning">পাণি, হস্ত, </td></tr>
+                        <tr><td>হাতি</td><td class="meaning hidden-meaning">গজ, হস্তি, </td></tr>
+                        <tr><td>বায়ু</td><td class="meaning hidden-meaning">অনল, সমীরণ, বাতাস,</td></tr>
+                        <tr><td>জল</td><td class="meaning hidden-meaning">পানি, বারি, সলিল</td></tr>
+                        <tr><td>আকাশ</td><td class="meaning hidden-meaning">গগন, আসমান, </td></tr>
+                        <tr><td>স্বর্গ</td><td class="meaning hidden-meaning">বেহেশত, জান্নাত, </td></tr>
+                        <tr><td>চাঁদ</td><td class="meaning hidden-meaning">চন্দ্র, শশী, </td></tr>
+                        <tr><td>চোখ</td><td class="meaning hidden-meaning">আঁখি, অক্ষি, লোচন, নেত্র,</td></tr>
+                        <tr><td>নারী</td><td class="meaning hidden-meaning">মহিলা, নন্দিনী, </td></tr>
+                        <tr><td>মাটি</td><td class="meaning hidden-meaning">ভূ</td></tr>
+                        <tr><td>কন্যা</td><td class="meaning hidden-meaning">মেয়ে, </td></tr>
+                        <tr><td>আলো</td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td>ফুল</td><td class="meaning hidden-meaning">পুষ্প,</td></tr>
+                        <tr><td>বন</td><td class="meaning hidden-meaning">জঙ্গল,</td></tr>
+                        <tr><td>ঘোড়া</td><td class="meaning hidden-meaning">ঘোটক, অশ্ব, বাজী, তুরগ, তুরংগ</td></tr>
+                        <tr><td>নদী</td><td class="meaning hidden-meaning">স্রোতস্বিনী</td></tr>
+                        <tr><td>সাপ</td><td class="meaning hidden-meaning">সর্প, বিষধর, আশীবিষ, নাগ, ফণী, ভুজঙ্গ, উরগ, অহি, দংশক</td></tr>
+                        <tr><td>কান</td><td class="meaning hidden-meaning">কর্ণ, শ্রুতি, শ্রোত্র, শ্রবণেন্দ্রিয়</td></tr>
+                        <tr><td>ইতি</td><td class="meaning hidden-meaning">ইস্তফা, শেষ, সমাপ্তি, অবসান, যবনিকা, রফা</td></tr>
+                        <tr><td>সমুদ্র</td><td class="meaning hidden-meaning">সাগর, সিন্ধু, অর্ণব, জলাধি, বারিধি, পারাবার, জলাধার, রত্নাকর</td></tr>
+                        <tr><td>ইচ্ছা</td><td class="meaning hidden-meaning">অভিরুচি, অভিপ্রায়, অভিলাষ, আকাঙ্ক্ষা, কামনা, বাসনা, লালসা, সাধ, স্পৃহা</td></tr>
+                        <tr><td>আগুন</td><td class="meaning hidden-meaning">অনল, অগ্নি, হুতাশন, পাবক, বহ্নি</td></tr>
+                        <tr><td>মাতা</td><td class="meaning hidden-meaning">মা, আম্মা, জননী, প্রসূতী, গর্ভধারিনী</td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr> 
+                      
                     </tbody>
                 </table>
 
@@ -151,7 +292,7 @@
                         <tr><td>সেবা করিবার ইচ্ছা</td><td class="meaning hidden-meaning">শুশ্রুষা</td><td><input type="text" class="form-control user-input" /></td></tr>
                         <tr><td>অন্য ভাষায় অনুবাদ/উদিত হয়নি যাহ</td><td class="meaning hidden-meaning">অনুদিত</td><td><input type="text" class="form-control user-input" /></td></tr>
                         <tr><td>অন্য যুগ</td><td class="meaning hidden-meaning">যুগান্তর</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>অন্য গ্রাম</td><td class="meaning hidden-meaning">গ্রামান্তর</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td></td><td class="meaning hidden-meaning"></td></tr>
                     </tbody>
 
                 </table>
@@ -326,7 +467,7 @@
                         <tr><td>যা পূর্বে চিন্তা করা যায়নি</td><td class="meaning hidden-meaning">অচিন্তিতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
                         <tr><td>ব্যক্তি সম্পর্কিত নয় এমন</td><td class="meaning hidden-meaning">বস্তুগত</td><td><input type="text" class="form-control user-input" /></td></tr>
                         <tr><td>যা পূর্বে ছিল এখন নেই</td><td class="meaning hidden-meaning">ভূতপূর্ব</td><td><input type="text" class="form-control user-input" /></td></tr>
-                        <tr><td>বনক্রুভাবে গমন করে যে</td><td class="meaning hidden-meaning">ভুজঙ্গ</td><td><input type="text" class="form-control user-input" /></td></tr>
+                        <tr><td>বক্রভাবে গমন করে যে</td><td class="meaning hidden-meaning">ভুজঙ্গ</td><td><input type="text" class="form-control user-input" /></td></tr>
                         <tr><td>যা প্রমাণ করা যায় না</td><td class="meaning hidden-meaning">অপ্রমেয়</td><td><input type="text" class="form-control user-input" /></td></tr>
                         <tr><td>বনে বাস করে যে</td><td class="meaning hidden-meaning">বনবাসী</td><td><input type="text" class="form-control user-input" /></td></tr>
                         <tr><td>যা প্রকাশ করা হয়নি</td><td class="meaning hidden-meaning">অব্যক্ত</td><td><input type="text" class="form-control user-input" /></td></tr>

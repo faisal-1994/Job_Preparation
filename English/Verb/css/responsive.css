@@ -1,0 +1,93 @@
+/* Base card spacing and layout */
+.card {
+  margin-bottom: 1rem;
+  border-radius: 0.7rem;
+}
+
+/* Responsive for mobile: stack cards vertically, adjust font and padding */
+@media (max-width: 575.98px) {
+  .row.justify-content-center > .col-12,
+  .row.justify-content-center > .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .subDiv.d-flex {
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+  .subDiv.d-flex > .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  h3.text-center {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+  .card-header h4 {
+    font-size: 1rem;
+  }
+  .card-body h6,
+  .card-body h5 {
+    font-size: 0.95rem;
+  }
+  .card-body p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet: show cards in two columns */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .row.justify-content-center > .col-md-4 {
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .subDiv.d-flex {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .subDiv.d-flex > .card {
+    flex: 1 1 48%;
+    max-width: 48%;
+    margin-bottom: 1rem;
+  }
+  h3.text-center {
+    font-size: 1.3rem;
+  }
+}
+
+/* Desktop: three columns for main cards, participle sub-cards in row */
+@media (min-width: 992px) {
+  .row.justify-content-center > .col-md-4 {
+    flex: 0 0 32%;
+    max-width: 32%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .subDiv.d-flex {
+    flex-direction: row !important;
+    gap: 1rem;
+  }
+  .subDiv.d-flex > .card {
+    flex: 1 1 32%;
+    max-width: 32%;
+    margin-bottom: 0;
+  }
+  h3.text-center {
+    font-size: 1.5rem;
+  }
+}
+
+/* Card shadow and hover effect for all screens */
+.card {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+}

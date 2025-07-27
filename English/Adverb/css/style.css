@@ -1,0 +1,27 @@
+
+ .firstDiv{
+    width: 150%;
+    height: 500px;
+ }
+
+ .firstDiv img{
+  
+    height: 500px;
+    border: 5px solid chartreuse;
+ }
+
+ .seeMore{
+    margin-left: 285px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+
+ }
+
+ p{
+    /* font-family: 'Courier New', Courier, monospace; */
+   
+ }
+
+
